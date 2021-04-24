@@ -33,6 +33,8 @@ export default {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  max-width: 700px;
+  margin: 10px auto;
   /* justify-content: space-between; */
 }
 /* .txt-box {
