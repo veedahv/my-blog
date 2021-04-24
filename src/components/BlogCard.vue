@@ -2,6 +2,7 @@
   <div class="post">
     <div class="txt-box">
       <h2 class="post-title">{{ post.title }}</h2>
+      <small class="author">By {{ post.author }}</small>
       <p class="post-info">{{ post.description }}</p>
     <router-link :to="{ name: 'BlogContent', params: {id: post.title, description: post.description, content: post.content, author: post.author, urlToImage: post.urlToImage}}">More</router-link>
     </div>
@@ -41,5 +42,8 @@ export default {
 }
 .post-img {
   width: 100%;
+}
+.author {
+  font-size: 10px;
 }
 </style>
