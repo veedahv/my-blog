@@ -7,9 +7,12 @@
        Have fun reading!!!
     </p>
     <div class="post-box">
-      <div class="post" v-for="post in posts" :key="post.title">
+      <div class="post" v-for="post in postsArr" :key="post.title">
         <blog-card :post="post"></blog-card>
       </div>
+      <!-- <div class="post" v-for="post in posts" :key="post.title">
+        <blog-card :post="post"></blog-card>
+      </div> -->
     </div>
   </div>
 </template>
@@ -17,6 +20,7 @@
 <script>
 // @ is an alias to /src
 import BlogCard from "@/components/BlogCard.vue";
+import articleInfo from "@/article-info";
 
 export default {
   name: 'Home',
@@ -25,18 +29,20 @@ export default {
   },
   data() {
     return {
-      posts: [],
+      // posts: [],
+      postsArr: articleInfo,
     };
   },
   mounted() {
-    fetch(
-      "https://newsapi.org/v2/top-headlines?country=ng&apiKey=" + process.env.VUE_APP_BLOGKEY
-    )
-      .then((res) => res.json())
-      .then((data) => (this.posts = data.articles))
-      .catch((err) => console.log(err.message));
+    // fetch(
+    //   "https://newsapi.org/v2/top-headlines?country=ng&apiKey=" + process.env.VUE_APP_BLOGKEY
+    // )
+    //   .then((res) => res.json())
+    //   .then((data) => (this.posts = data.articles))
+    //   .catch((err) => console.log(err.message));
     
-    console.log(this.posts);
+    // console.log(this.posts);
+    console.log(this.postsArr);
   },
 }
 </script>
@@ -55,11 +61,13 @@ export default {
 }
 .post-box {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: 1fr;
   grid-gap: 25px;
-  margin-top: 20px;
+  margin: 20px auto;
+  max-width: 700px;
 }
-@media only screen and (max-width: 798px) {
+/* @media only screen and (max-width: 798px) {
   .post-box {
     grid-template-columns: 1fr 1fr;
   }
@@ -68,5 +76,5 @@ export default {
   .post-box {
     grid-template-columns: 1fr;
   }
-}
+} */
 </style>

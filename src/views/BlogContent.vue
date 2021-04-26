@@ -1,29 +1,59 @@
 <template>
-  <div class="post">
-    <div class="txt-box">
-      <h2 class="post-title">{{ id }}</h2>
-      <p class="post-info">{{ description }}</p>
-      <p class="post-info">{{ content }}</p>
-      <small class="post-author">{{ author }}</small>
+  <div class="post-container">
+    <div class="post">
+      <div class="txt-box">
+        <h2 class="post-title">{{ id }}</h2>
+        <p class="post-info">{{ description }}</p>
+        <!-- <p class="post-info">
+          {{ contentsObj }}
+        </p> -->
+        <!-- <p class="post-info" v-for="content in contentsObj" :key="content">
+          {{ content }}
+        </p> -->
+        <p class="post-info" v-for="content in contentsObj" :key="content">
+          {{ content.contentTxt }}
+        </p>
+        <small class="post-author">{{ author }}</small>
+      </div>
+      <div class="img-box">
+        <img
+          :src="require(`@/assets/images/blog-img/${urlToImage}.jpg`)"
+          class="post-img"
+        />
+        <!-- <img :src="post.urlToImage" width="153" height="130" /> -->
+      </div>
     </div>
-    <div class="img-box">
-      <img :src="urlToImage" class="post-img" />
-      <!-- <img :src="post.urlToImage" width="153" height="130" /> -->
-    </div>
+    <CommentBox></CommentBox>
   </div>
   <!--item-->
 </template>
 
 <script>
+import CommentBox from "../components/CommentBox";
 export default {
-  // data() {
-  //   return {
-  //     post: this.$route.params.post,
-  //     description: this.$route.params.description,
-  //     id: this.$route.params.id
-  //   };
+  components: { CommentBox },
+  // props: {
+  //   id: String,
+  //   description: String,
+  //   contents: Object,
+  //   author: String,
+  //   urlToImage: String,
   // },
-  props: ['id', 'description', 'content', 'author', 'urlToImage'],
+  props: ["id", "description", "contents", "author", "urlToImage"],
+  data() {
+    return {
+      // contentsObj: this.contents,
+      contentsObj: JSON.parse(this.contents),
+      // post: this.$route.params.post,
+      // description: this.$route.params.description,
+      // id: this.$route.params.id
+    };
+  },
+  mounted() {
+    console.log(this.contents);
+    console.log(this.contentsObj);
+  },
+  // props: ["id", "description", "author", "urlToImage"],
   // props: ['post', 'id'],
 };
 </script>
