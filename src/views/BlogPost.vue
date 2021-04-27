@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="blog-post">
     <h3 class="blog-top">Hey there!</h3>
     <h4 class="blog-intro">Welcome to my blog!!</h4>
     <p class="blog-txt">
@@ -23,7 +23,7 @@ import BlogCard from "@/components/BlogCard.vue";
 import articleInfo from "@/article-info";
 
 export default {
-  name: 'Home',
+  name: 'BlogPost',
   components: {
     BlogCard,
   },
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style scoped>
-.home {
+.blog-post {
   margin: 10px auto;
 }
 .blog-txt,

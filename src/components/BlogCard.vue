@@ -19,10 +19,12 @@
         </div>
         <div class="author-post-info">
           <h3 class="author">{{ post.author }}</h3>
-          <small class="author">{{ post.publishedAt }}</small>
+          <h4 class="author">{{ post.authorProf }}</h4>
         </div>
       </div>
       <h2 class="post-title">{{ post.title }}</h2>
+          <small class="author">{{ post.publishedAt }}</small> | 
+          <small class="author">{{ post.readTime }}</small>
       <!-- <p class="post-info">{{ post.description }}</p> -->
       <!-- <p class="post-info" v-for="content in post.contents" :key="content">
         {{ content.contentTxt }}
@@ -80,7 +82,7 @@ export default {
   flex-basis: 44%;
 }
 .post > .txt-box {
-  padding-top: 25px;
+  padding-top: 15px;
   flex-basis: 52%;
 }
 /* .txt-box {
@@ -95,9 +97,12 @@ export default {
 .post-img {
   width: 100%;
 }
+/* .author-post-info {
+  height: fit-content;
+} */
 .author-box {
   display: flex;
-  align-content: center;
+  align-items: center;
 }
 .author-img {
   width: 40px;
@@ -106,7 +111,8 @@ export default {
 }
 .author {
   font-size: 10px;
-  margin-bottom: 2px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 @media only screen and (max-width: 567px) {
   .post {
