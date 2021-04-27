@@ -3,16 +3,19 @@
     <div class="post">
       <div class="txt-box">
         <h2 class="post-title">{{ id }}</h2>
-        <p class="post-info">{{ description }}</p>
+        <!-- <p class="post-info">{{ description }}</p> -->
         <!-- <p class="post-info">
           {{ contentsObj }}
         </p> -->
         <!-- <p class="post-info" v-for="content in contentsObj" :key="content">
           {{ content }}
         </p> -->
-        <p class="post-info" v-for="content in contentsObj" :key="content">
+        <div class="post-contents" v-for="content in contentsObj" :key="content">
+          <h3 class="post-title" v-if="content.subTitle">{{ content.subTitle }}</h3>
+        <p class="post-info">
           {{ content.contentTxt }}
         </p>
+        </div>
         <small class="post-author">{{ author }}</small>
       </div>
       <div class="img-box">
@@ -39,7 +42,8 @@ export default {
   //   author: String,
   //   urlToImage: String,
   // },
-  props: ["id", "description", "contents", "author", "urlToImage"],
+  // props: ["id", "description", "contents", "author", "urlToImage"],
+  props: ["id", "contents", "author", "urlToImage"],
   data() {
     return {
       // contentsObj: this.contents,
@@ -50,8 +54,8 @@ export default {
     };
   },
   mounted() {
-    console.log(this.contents);
-    console.log(this.contentsObj);
+    // console.log(this.contents);
+    // console.log(this.contentsObj);
   },
   // props: ["id", "description", "author", "urlToImage"],
   // props: ['post', 'id'],

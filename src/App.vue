@@ -1,6 +1,7 @@
 <template>
   <div id="nav">
     <router-link to="/">My Blog</router-link> 
+    <router-link to="/blog">Blog</router-link> 
     <a href="https://victoria-akpan.netlify.app/" class="portfolio">By Veedahv</a>
     <!-- <router-link to="/about">About</router-link> -->
   </div>

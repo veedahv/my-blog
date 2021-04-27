@@ -23,7 +23,7 @@
         </div>
       </div>
       <h2 class="post-title">{{ post.title }}</h2>
-      <p class="post-info">{{ post.description }}</p>
+      <!-- <p class="post-info">{{ post.description }}</p> -->
       <!-- <p class="post-info" v-for="content in post.contents" :key="content">
         {{ content.contentTxt }}
       </p> -->
@@ -38,9 +38,10 @@
             urlToImage: post.urlToImage,
           },
         }"
-        >More</router-link
       >
-            <!-- contents: post.contents, -->
+        <p class="post-info">{{ post.description }}</p></router-link
+      >
+      <!-- contents: post.contents, -->
     </div>
   </div>
   <!--item-->
@@ -58,8 +59,8 @@ export default {
   },
   mounted() {
     // console.log(this.contents);
-    console.log(this.contentsObj);
-    console.log(JSON.stringify(this.contentsObj));
+    // console.log(this.contentsObj);
+    // console.log(JSON.stringify(this.contentsObj));
   },
 };
 </script>
@@ -68,13 +69,18 @@ export default {
 .post {
   display: flex;
   /* flex-direction: column-reverse; */
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+}
+.post a {
+  text-decoration: none;
+  color: inherit;
 }
 .post > .img-box {
   flex-basis: 44%;
 }
 .post > .txt-box {
+  padding-top: 25px;
   flex-basis: 52%;
 }
 /* .txt-box {
