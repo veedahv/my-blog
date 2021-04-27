@@ -9,16 +9,28 @@
 </template>
 
 <style>
+:root {
+--primay-color: #F2D43D;
+--sec-color: #A68524;
+--tertiary-color: #F2CA52;
+--light-color: #F2F2F2;
+--spare-color: #8C8C8C;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
+  /* font-family: Avnir, Helvetia, Arial, sans-serif; */
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: #2c3e50;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: 5px auto;
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
 }
 
 #nav {

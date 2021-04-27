@@ -23,9 +23,11 @@
         </div>
       </div>
       <h2 class="post-title">{{ post.title }}</h2>
-          <small class="author">{{ post.publishedAt }}</small> | 
-          <small class="author">{{ post.readTime }}</small>
-      <!-- <p class="post-info">{{ post.description }}</p> -->
+      <div class="time-info-box">
+        <small class="time-info">{{ post.publishedAt }}</small> &#8226;
+        <small class="time-info">{{ post.readTime }}</small>
+      </div>
+      <!-- <p class="post-info">{{ post.dscription }}</p> -->
       <!-- <p class="post-info" v-for="content in post.contents" :key="content">
         {{ content.contentTxt }}
       </p> -->
@@ -82,7 +84,7 @@ export default {
   flex-basis: 44%;
 }
 .post > .txt-box {
-  padding-top: 15px;
+  padding-top: 10px;
   flex-basis: 52%;
 }
 /* .txt-box {
@@ -103,6 +105,7 @@ export default {
 .author-box {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 .author-img {
   width: 40px;
@@ -113,6 +116,10 @@ export default {
   font-size: 10px;
   margin-top: 4px;
   margin-bottom: 4px;
+}
+.time-info-box {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media only screen and (max-width: 567px) {
   .post {
