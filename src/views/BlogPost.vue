@@ -50,7 +50,9 @@ export default {
 
 <style scoped>
 .blog-post {
-  margin: 10px auto;
+  margin: 5px auto;
+  max-width: 1000px;
+  padding: 10px 25px;
 }
 .blog-txt,
 .blog-top,
