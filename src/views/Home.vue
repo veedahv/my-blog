@@ -75,7 +75,7 @@ export default {
   },
   mounted() {
     (this.HomeBlogCards = this.HomeCardsArr.slice(0, 3)),
-    // (this.HomeBlogCards = this.HomeCardsArr.slice(0, 4)),
+      // (this.HomeBlogCards = this.HomeCardsArr.slice(0, 4)),
       console.log(this.HomeBlogCards);
   },
   // computed: {},
@@ -177,9 +177,12 @@ export default {
 }
 @media only screen and (max-width: 567px) {
   .landing-container {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .landing-box {
+    margin: 0px;
+  }
   .quote-box {
     width: 100%;
     padding: 35px 40px;

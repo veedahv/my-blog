@@ -1,11 +1,11 @@
 <template>
   <div class="blog-post">
-    <h3 class="blog-top">Hey there!</h3>
+    <!-- <h3 class="blog-top">Hey there!</h3>
     <h4 class="blog-intro">Welcome to my blog!!</h4>
     <p class="blog-txt">
       I created it using Vue Js. 
        Have fun reading!!!
-    </p>
+    </p> -->
     <div class="post-box">
       <div class="post" v-for="post in postsArr" :key="post.title">
         <blog-card :post="post"></blog-card>
