@@ -143,7 +143,7 @@ export default {
   justify-content: flex-end;
 }
 .author-img {
-  width: 50px;
+  width: 60px;
   border-radius: 50%;
   margin-right: 15px;
 }
