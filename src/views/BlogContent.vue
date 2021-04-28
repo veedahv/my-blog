@@ -10,19 +10,43 @@
         <!-- <p class="post-info" v-for="content in contentsObj" :key="content">
           {{ content }}
         </p> -->
-        <div class="post-contents" v-for="content in contentsObj" :key="content">
-          <h3 class="post-title" v-if="content.subTitle">{{ content.subTitle }}</h3>
-        <p class="post-info">
-          {{ content.contentTxt }}
-        </p>
+        <!-- <div
+          class="post-contents"
+          v-for="content in contentsObj"
+          :key="content"
+        >
+          <h3 class="post-title" v-if="content.subTitle">
+            {{ content.subTitle }}
+          </h3>
+          <p class="post-info">
+            {{ content.contentTxt }}
+          </p>
         </div>
         <small class="post-author">{{ author }}</small>
+      </div> -->
+        <div
+          class="post-contents"
+          v-for="content in postObj.contents"
+          :key="content"
+        >
+          <h3 class="post-subtitle" v-if="content.subTitle">
+            {{ content.subTitle }}
+          </h3>
+          <p class="post-info">
+            {{ content.contentTxt }}
+          </p>
+        </div>
+        <small class="post-author">{{ postObj.author }}</small>
       </div>
       <div class="img-box">
         <img
-          :src="require(`@/assets/images/blog-img/${urlToImage}.jpg`)"
+          :src="require(`@/assets/images/blog-img/${postObj.urlToImage}.jpg`)"
           class="post-img"
         />
+        <!-- <img
+          :src="require(`@/assets/images/blog-img/${urlToImage}.jpg`)"
+          class="post-img"
+        /> -->
         <!-- <img :src="post.urlToImage" width="153" height="130" /> -->
       </div>
     </div>
@@ -43,22 +67,24 @@ export default {
   //   urlToImage: String,
   // },
   // props: ["id", "description", "contents", "author", "urlToImage"],
-  props: ["id", "contents", "author", "urlToImage"],
+  props: ["post", "id"],
+  // props: ["id", "contents", "author", "urlToImage"],
   data() {
     return {
       // contentsObj: this.contents,
-      contentsObj: JSON.parse(this.contents),
+      // contentsObj: JSON.parse(this.contents),
+      postObj: JSON.parse(this.post),
       // post: this.$route.params.post,
       // description: this.$route.params.description,
       // id: this.$route.params.id
     };
   },
   mounted() {
+    console.log(this.postObj);
     // console.log(this.contents);
     // console.log(this.contentsObj);
   },
   // props: ["id", "description", "author", "urlToImage"],
-  // props: ['post', 'id'],
 };
 </script>
 
@@ -75,10 +101,16 @@ export default {
   max-width: 400px;
 } */
 .post-title {
-  font-size: 16px;
+  font-size: 26px;
+  margin: 20px 0;
+}
+.post-subtitle {
+  font-size: 20px;
+  margin: 15px 0;
 }
 .post-info {
-  font-size: 14px;
+  font-size: 16px;
+  margin-bottom: 15px;
 }
 .post-img {
   width: 100%;

@@ -1,21 +1,18 @@
 <template>
   <div class="post">
-    <div class="img-box">
-      <!-- <img :src="post.urlToImage" class="post-img" /> -->
-      <!-- <img :src="require(`@/assets/images/blog-img/cupcake.jpg`)" class="post-img" /> -->
+    <!-- <div class="img-box">
       <img
         :src="require(`@/assets/images/blog-img/${post.urlToImage}.jpg`)"
         class="post-img"
       />
-      <!-- <img :src="require('@/assets/images/blog-img/' + post.urlToImage)" class="post-img" /> -->
-    </div>
+    </div> -->
     <div class="txt-box">
       <div class="author-box">
         <div class="author-img-box">
-          <img
+          <!-- <img
             :src="require(`@/assets/images/author-img/${post.authorImg}.jpg`)"
             class="author-img"
-          />
+          /> -->
         </div>
         <div class="author-post-info">
           <h3 class="author">{{ post.author }}</h3>
@@ -45,7 +42,7 @@
       >
         <p class="post-info">{{ post.description }}</p></router-link
       > -->
-      <router-link
+      <!-- <router-link
         :to="{
           name: 'BlogContent',
           params: {
@@ -55,7 +52,7 @@
         }"
       >
         <p class="post-info">{{ post.description }}</p></router-link
-      >
+      > -->
       <!-- contents: post.contents, -->
     </div>
   </div>
@@ -92,18 +89,19 @@ export default {
   text-decoration: none;
   color: inherit;
 }
-.post > .img-box {
+/* .post > .img-box {
   flex-basis: 44%;
-}
+} */
 .post > .txt-box {
   padding-top: 10px;
-  flex-basis: 52%;
+  /* flex-basis: 52%; */
 }
 /* .txt-box {
   max-width: 400px;
 } */
 .post-title {
-  font-size: 16px;
+  font-size: 28px;
+  font-weight: 700;
 }
 .post-info {
   font-size: 14px;
@@ -111,9 +109,6 @@ export default {
 .post-img {
   width: 100%;
 }
-/* .author-post-info {
-  height: fit-content;
-} */
 .author-box {
   display: flex;
   align-items: center;
@@ -125,12 +120,12 @@ export default {
   margin-right: 15px;
 }
 .author {
-  font-size: 12px;
+  font-size: 16px;
   /* margin-top: 4px; */
   margin-bottom: 4px;
 }
 .authorProf {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 400;
   /* margin-top: 4px; */
   /* margin-bottom: 4px; */
@@ -139,9 +134,9 @@ export default {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-@media only screen and (max-width: 567px) {
+/* @media only screen and (max-width: 567px) {
   .post {
     flex-direction: column;
   }
-}
+} */
 </style>

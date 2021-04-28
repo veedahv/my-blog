@@ -6,12 +6,32 @@
           <div class="landing-box">
             <div class="quote-box">
               <p class="home-quote">
-                <i class="fas fa-quote-left"></i>Reading changes your life. Reading unlocks worlds unknown or forgotten, taking travelers around the world and through time. Reading helps you escape the confines of school and pursue your own education.<i class="fas fa-quote-right"></i> – Donalyn Miller
+                <i class="fa fa-quote-left"></i> Reading changes your life.
+                Reading unlocks worlds unknown or forgotten, taking travelers
+                around the world and through time. Reading helps you escape the
+                confines of school and pursue your own education.
+                <i class="fa fa-quote-right"></i>
               </p>
+              <div class="home-quote-author">
+                <em class="">Donalyn Miller</em>
+              </div>
             </div>
             <div class="quote-img-box">
-              <img :src="require('@/assets/images/quote-img.jpg')" alt="" class="quote-img">
+              <img
+                :src="require('@/assets/images/quote-img.jpg')"
+                alt=""
+                class="quote-img"
+              />
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blog-post-section">
+      <div class="home-container">
+        <div class="home-post-box">
+          <div class="post" v-for="post in HomeBlogCards" :key="post.title">
+            <home-blog-card :post="post"></home-blog-card>
           </div>
         </div>
       </div>
@@ -37,13 +57,28 @@
 <script>
 // @ is an alias to /src
 // import BlogCard from "@/components/BlogCard.vue";
-// import articleInfo from "@/article-info";
+// import BlogCard from "@/components/BlogCard.vue";
+// import @HomeBlogCardVue from ''
+import articleInfo from "@/article-info";
+import HomeBlogCard from "@/components/HomeBlogCard .vue";
 
 export default {
   name: "Home",
-  // components: {
-  //   BlogCard,
-  // },
+  components: {
+    HomeBlogCard,
+  },
+  data() {
+    return {
+      HomeCardsArr: articleInfo,
+      HomeBlogCards: [],
+    };
+  },
+  mounted() {
+    (this.HomeBlogCards = this.HomeCardsArr.slice(0, 3)),
+    // (this.HomeBlogCards = this.HomeCardsArr.slice(0, 4)),
+      console.log(this.HomeBlogCards);
+  },
+  // computed: {},
   // data() {
   //   return {
   //     // posts: [],
@@ -68,15 +103,12 @@ export default {
 .home {
   margin: 10px auto;
 }
-/* .blog-txt,
-.blog-top,
-.blog-intro {
-  text-align: center;
-  font-size: 22px;
-  margin-bottom: 10px;
-  margin-top: 0px;
-} */
-.landing-container {
+.home-container {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 10px 25px;
+}
+.landing {
   /* padding-top: 40px;
   padding-bottom: 100px; */
   background: var(--primay-color);
@@ -99,7 +131,7 @@ export default {
   background: var(--spare-color);
   color: var(--light-color);
   /* box-sizing: border-box; */
-  box-shadow: 7px 7px 10px rgba(0, 0, 0, .2);
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
   /* box-shadow: 0 0 2px rgba(0, 0, 0, .2); */
   /* position: relative; */
   position: absolute;
@@ -112,10 +144,16 @@ export default {
   line-height: 24px;
   margin: 0;
 }
+.home-quote-author {
+  font-weight: lighter;
+  font-size: 16px;
+  text-align: right;
+  width: 100%;
+}
 .quote-img-box {
   width: 55%;
   position: relative;
-  box-shadow: 7px 7px 10px rgba(0, 0, 0, .2);
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   /* position: absolute;
   top: 70%;
@@ -125,29 +163,39 @@ export default {
 .quote-img {
   width: 100%;
 }
-/* @media only screen and (max-width: 798px) {
-  .post-box {
+.home-post-box {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+@media only screen and (max-width: 798px) {
+  .home-post-box {
     grid-template-columns: 1fr 1fr;
+    justify-content: center;
   }
-} */
+}
 @media only screen and (max-width: 567px) {
   .quote-box {
-  width: 100%;
-  padding: 35px 40px;
-  box-shadow: 7px 7px 10px rgba(0, 0, 0, .2);
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.home-quote {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0;
-}
-.quote-img-box {
-  width: 100%;
-  position: relative;
-  box-shadow: 7px 7px 10px rgba(0, 0, 0, .2);
-}
+    width: 100%;
+    padding: 35px 40px;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .home-quote {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .quote-img-box {
+    width: 100%;
+    position: relative;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
+  }
+  .home-post-box {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

@@ -31,6 +31,7 @@ export default {
     return {
       // posts: [],
       postsArr: articleInfo,
+      // posts: JSON.stringify(articleInfo),
     };
   },
   mounted() {
