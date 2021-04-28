@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
+import NotFound from '../views/404.vue'
 import BlogPost from '../views/BlogPost.vue'
 import BlogContent from '../views/BlogContent.vue'
 
@@ -20,6 +21,16 @@ const routes = [
     path: '/blog',
     name: 'BlogPost',
     component: BlogPost
+  },
+  // {
+  //   path: '/*',
+  //   name: 'NotFound',
+  //   component: NotFound
+  // },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound
   },
   {
     path: '/about',
