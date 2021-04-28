@@ -68,7 +68,7 @@ export default {
   data() {
     return {
       // contentsObj: this.post.contents,
-      contentsObj: JSON.stringify(this.post.contents),
+      // contentsObj: JSON.stringify(this.post.contents),
       postsObj: JSON.stringify(this.post),
       // contentsObj: JSON.parse(this.post.contents),
     };

@@ -89,10 +89,25 @@ export default {
 </script>
 
 <style scoped>
+.post-container {
+  max-width: 1000px;
+  padding: 10px 25px;
+  margin: 10px auto;
+  /* justify-content: space-between; */
+}
 .post {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  /* max-width: 700px; */
+  width: 90%;
+  margin: 10px auto;
+  /* justify-content: space-between; */
+}
+.txt-box {
+  /* display: flex;
+  flex-direction: column-reverse;
+  align-items: center; */
   max-width: 700px;
   margin: 10px auto;
   /* justify-content: space-between; */
@@ -112,7 +127,13 @@ export default {
   font-size: 16px;
   margin-bottom: 15px;
 }
+.img-box,
 .post-img {
   width: 100%;
+}
+@media only screen and (max-width: 567px) {
+  .post {
+    width: 100%;
+  }
 }
 </style>

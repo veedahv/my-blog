@@ -85,6 +85,10 @@ a {
   font-size: 25px;
 }
 
+.nav-links > * {
+  margin-left: 10px;
+}
+
 #nav .portfolio {
   font-size: 18px;
 }
