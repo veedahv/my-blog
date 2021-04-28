@@ -176,6 +176,10 @@ export default {
   }
 }
 @media only screen and (max-width: 567px) {
+  .landing-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
   .quote-box {
     width: 100%;
     padding: 35px 40px;

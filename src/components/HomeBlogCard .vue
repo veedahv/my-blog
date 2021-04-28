@@ -1,5 +1,15 @@
 <template>
-  <div class="post">
+  <!-- <div class="post"> -->
+  <div
+    class="post"
+    :style="{
+      backgroundImage:
+        'url(' +
+        require(`@/assets/images/blog-img/${post.urlToImage}.jpg`) +
+        ')',
+    }"
+  >
+    <!-- <div class="post" :style="{backgroundImage: 'url(`@/assets/images/blog-img/${post.urlToImage}.jpg`)'}"> -->
     <!-- <div class="img-box">
       <img
         :src="require(`@/assets/images/blog-img/${post.urlToImage}.jpg`)"
@@ -7,22 +17,32 @@
       />
     </div> -->
     <div class="txt-box">
+      <small class="time-info">Read time {{ post.readTime }}</small>
+      <router-link
+        :to="{
+          name: 'BlogContent',
+          params: {
+            id: post.title,
+            post: postsObj,
+          },
+        }"
+      >
+        <h2 class="post-title">{{ post.title }}</h2>
+      </router-link>
+      <div class="time-info-box">
+        <small class="time-info">{{ post.publishedAt }}</small>
+      </div>
       <div class="author-box">
         <div class="author-img-box">
-          <!-- <img
+          <img
             :src="require(`@/assets/images/author-img/${post.authorImg}.jpg`)"
             class="author-img"
-          /> -->
+          />
         </div>
         <div class="author-post-info">
           <h3 class="author">{{ post.author }}</h3>
           <h4 class="authorProf">{{ post.authorProf }}</h4>
         </div>
-      </div>
-      <h2 class="post-title">{{ post.title }}</h2>
-      <div class="time-info-box">
-        <small class="time-info">{{ post.publishedAt }}</small> &#8226;
-        <small class="time-info">{{ post.readTime }}</small>
       </div>
       <!-- <p class="post-info">{{ post.dscription }}</p> -->
       <!-- <p class="post-info" v-for="content in post.contents" :key="content">
@@ -84,6 +104,12 @@ export default {
   /* flex-direction: column-reverse; */
   align-items: flex-start;
   justify-content: space-between;
+  background: var(--spare-color) center center no-repeat;
+  background-blend-mode: soft-light;
+  /* background-image: url('require(`@/assets/images/blog-img/${post.urlToImage}.jpg`)'); */
+  color: var(--light-color);
+  height: 100%;
+  padding: 20px;
 }
 .post a {
   text-decoration: none;
@@ -112,10 +138,12 @@ export default {
 .author-box {
   display: flex;
   align-items: center;
+  margin-top: 15px;
   margin-bottom: 10px;
+  justify-content: flex-end;
 }
 .author-img {
-  width: 40px;
+  width: 50px;
   border-radius: 50%;
   margin-right: 15px;
 }
@@ -130,9 +158,10 @@ export default {
   /* margin-top: 4px; */
   /* margin-bottom: 4px; */
 }
-.time-info-box {
-  margin-top: 8px;
-  margin-bottom: 8px;
+.time-info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 /* @media only screen and (max-width: 567px) {
   .post {
