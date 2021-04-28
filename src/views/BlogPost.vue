@@ -1,7 +1,8 @@
 <template>
   <div class="blog-post">
-    <!-- <h3 class="blog-top">Hey there!</h3>
-    <h4 class="blog-intro">Welcome to my blog!!</h4>
+    <h3 class="blog-top">Blog posts</h3>
+    <!-- <h3 class="blog-top">Hey there!</h3> -->
+    <!-- <h4 class="blog-intro">Welcome to my blog!!</h4>
     <p class="blog-txt">
       I created it using Vue Js. 
        Have fun reading!!!
@@ -51,24 +52,31 @@ export default {
 <style scoped>
 .blog-post {
   margin: 5px auto;
-  max-width: 1000px;
+  max-width: 760px;
   padding: 10px 25px;
 }
-.blog-txt,
+.blog-top {
+  /* text-align: center; */
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  border-left: 2px solid var(--spare-color);
+}
+/* .blog-txt,
 .blog-top,
 .blog-intro {
   text-align: center;
   font-size: 22px;
   margin-bottom: 10px;
   margin-top: 0px;
-}
+} */
 .post-box {
   display: grid;
   /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-columns: 1fr;
   grid-gap: 25px;
   margin: 20px auto;
-  max-width: 700px;
+  /* max-width: 700px; */
 }
 /* @media only screen and (max-width: 798px) {
   .post-box {
