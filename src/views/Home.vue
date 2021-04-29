@@ -197,7 +197,7 @@ export default {
   /* text-align: center; */
   /* margin: 25px auto; */
   background: var(--primay-color);
-  color: var(--light-color);
+  color: var(--sec-color);
   padding: 10px;
   border-radius: 5px;
 }
