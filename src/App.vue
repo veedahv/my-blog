@@ -56,7 +56,7 @@
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   /* color: #2c3e50; */
-  color: var(--tertiary-color);
+  color: var(--sec-color);
   /* max-width: 1000px; */
   margin: 5px auto;
   /* padding: 10px 30px; */
