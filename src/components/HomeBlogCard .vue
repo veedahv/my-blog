@@ -104,10 +104,13 @@ export default {
   /* flex-direction: column-reverse; */
   align-items: flex-start;
   justify-content: space-between;
-  background: var(--light-a-color) center center no-repeat;
+  /* background: var(--light-a-color) center center no-repeat; */
+  /* background: var(--sec-a-color) center center no-repeat; */
+  background: var(--sec-color) center center no-repeat;
   background-blend-mode: soft-light;
   /* background-image: url('require(`@/assets/images/blog-img/${post.urlToImage}.jpg`)'); */
-  color: var(--white-color);
+  /* color: var(--white-color); */
+  color: var(--light-color);
   height: 100%;
   padding: 20px;
   border-radius: 5px;
@@ -148,6 +151,7 @@ export default {
   width: 60px;
   border-radius: 50%;
   margin-right: 15px;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
 }
 .author {
   font-size: 16px;

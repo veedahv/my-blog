@@ -38,6 +38,7 @@
 :root {
   --primay-color: #ffe849;
   --sec-color: #4d4d3d;
+  --sec-a-color: #4d4d3d79;
   --tertiary-color: #8b9386;
   --light-color: #f0f0eb;
   --light-a-color: #f0f0eb63;

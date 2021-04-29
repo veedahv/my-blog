@@ -42,6 +42,17 @@
         </div>
       </div>
     </div>
+    <div class="tips-post-section">
+      <div class="home-container">
+        <h3 class="home-sub-title">Here are a few articles that might interest you</h3>
+        <div class="home-tip-box">
+          <div class="tip-box" v-for="tip in HomeTipsArr" :key="tip.title">
+            <!-- <home-blog-card :post="post"></home-blog-card> -->
+            <home-tip-card :tip="tip"></home-tip-card>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- <h2 class="hom-intro">SOON</h2> -->
     <!-- <h3 class="blog-top">Hey there!</h3>
     <h4 class="blog-intro">Welcome to my blog!!</h4>
@@ -61,20 +72,24 @@
 </template>
 
 <script>
+import HomeTipCard from '@/components/HomeTipCard'
 // @ is an alias to /src
 // import BlogCard from "@/components/BlogCard.vue";
 // import BlogCard from "@/components/BlogCard.vue";
 // import @HomeBlogCardVue from ''
+import tipsInfo from "@/tips-info";
 import articleInfo from "@/article-info";
 import HomeBlogCard from "@/components/HomeBlogCard .vue";
 
 export default {
   name: "Home",
   components: {
+    HomeTipCard,
     HomeBlogCard,
   },
   data() {
     return {
+      HomeTipsArr: tipsInfo,
       HomeCardsArr: articleInfo,
       HomeBlogCards: [],
     };
@@ -170,8 +185,8 @@ export default {
   width: 100%;
 }
 
-.home-sube-title{
-  margin-top: 20px;
+.home-sub-title{
+  /* margin-top: 20px; */
   font-size: 25px;
   text-transform: capitalize;
 }
@@ -183,6 +198,7 @@ export default {
   grid-template-columns: 1fr 1fr 1fr;
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
+
 .blog-link-box {
   width: 150px;
   text-align: center;
@@ -200,6 +216,20 @@ export default {
   color: var(--sec-color);
   padding: 10px;
   border-radius: 5px;
+  font-weight: 500;
+}
+.tips-post-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: var(--sec-color);
+  color: var(--light-color);
+}
+.home-tip-box {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: 1fr 1fr;
 }
 @media only screen and (max-width: 798px) and (min-width: 567px) {
   .post-box:last-of-type {
@@ -243,6 +273,9 @@ export default {
     box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
   }
   .home-post-box {
+    grid-template-columns: 1fr;
+  }
+  .home-tip-box {
     grid-template-columns: 1fr;
   }
 }
