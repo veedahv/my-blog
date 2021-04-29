@@ -27,12 +27,22 @@
 </template>
 
 <style>
-:root {
+/* :root {
   --primay-color: #f2d43d;
   --sec-color: #a68524;
   --tertiary-color: #f2ca52;
   --light-color: #f2f2f2;
   --spare-color: #8c8c8c;
+  --white-color: #ffffff;
+} */
+:root {
+  --primay-color: #ffe849;
+  --sec-color: #4d4d3d;
+  --tertiary-color: #8b9386;
+  --light-color: #f0f0eb;
+  --light-a-color: #f0f0eb63;
+  --spare-color: #a9b1a1;
+  --white-color: #ffffff;
 }
 * {
   margin: 0;
@@ -45,7 +55,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
-  color: #2c3e50;
+  /* color: #2c3e50; */
+  color: var(--tertiary-color);
   /* max-width: 1000px; */
   margin: 5px auto;
   /* padding: 10px 30px; */

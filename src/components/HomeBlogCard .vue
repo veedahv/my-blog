@@ -17,7 +17,7 @@
       />
     </div> -->
     <div class="txt-box">
-      <small class="time-info">Read time {{ post.readTime }}</small>
+      <small class="time-info">{{ post.readTime }} read time </small>
       <router-link
         :to="{
           name: 'BlogContent',
@@ -104,12 +104,14 @@ export default {
   /* flex-direction: column-reverse; */
   align-items: flex-start;
   justify-content: space-between;
-  background: var(--spare-color) center center no-repeat;
+  background: var(--light-a-color) center center no-repeat;
   background-blend-mode: soft-light;
   /* background-image: url('require(`@/assets/images/blog-img/${post.urlToImage}.jpg`)'); */
-  color: var(--light-color);
+  color: var(--white-color);
   height: 100%;
   padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
 }
 .post a {
   text-decoration: none;

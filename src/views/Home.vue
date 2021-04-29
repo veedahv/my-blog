@@ -13,7 +13,7 @@
                 <i class="fa fa-quote-right"></i>
               </p>
               <div class="home-quote-author">
-                <em class="">Donalyn Miller</em>
+                <em class=""> - Donalyn Miller</em>
               </div>
             </div>
             <div class="quote-img-box">
@@ -29,14 +29,20 @@
     </div>
     <div class="blog-post-section">
       <div class="home-container">
+        <h3 class="home-sube-title">Here are a few articles that might interest you</h3>
         <div class="home-post-box">
-          <div class="post" v-for="post in HomeBlogCards" :key="post.title">
+          <div class="post-box" v-for="post in HomeBlogCards" :key="post.title">
             <home-blog-card :post="post"></home-blog-card>
           </div>
         </div>
+        <div class="blog-link-box">
+          <router-link to="/blog">
+            <div class="blog-link">View All</div>
+          </router-link>
+        </div>
       </div>
     </div>
-    <!-- <h2 class="home-intro">SOON</h2> -->
+    <!-- <h2 class="hom-intro">SOON</h2> -->
     <!-- <h3 class="blog-top">Hey there!</h3>
     <h4 class="blog-intro">Welcome to my blog!!</h4>
     <p class="blog-txt">
@@ -129,7 +135,7 @@ export default {
   line-height: 28px;
   padding: 35px 40px;
   background: var(--spare-color);
-  color: var(--light-color);
+  color: var(--white-color);
   /* box-sizing: border-box; */
   box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
   /* box-shadow: 0 0 2px rgba(0, 0, 0, .2); */
@@ -163,11 +169,46 @@ export default {
 .quote-img {
   width: 100%;
 }
+
+.home-sube-title{
+  margin-top: 20px;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
 .home-post-box {
+  margin-top: 20px;
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+.blog-link-box {
+  width: 150px;
+  text-align: center;
+  margin: 25px auto;
+  /* background: var(--primay-color);
+  color: var(--light-color);
+  padding: 10px;
+  border-radius: 5px; */
+}
+.blog-link {
+  /* width: 150px; */
+  /* text-align: center; */
+  /* margin: 25px auto; */
+  background: var(--primay-color);
+  color: var(--light-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 798px) and (min-width: 567px) {
+  .post-box:last-of-type {
+    grid-column: 1 / 3;
+  }
+  .post-box:last-of-type > .post {
+    width: 50%;
+    margin: auto;
+  }
 }
 @media only screen and (max-width: 798px) {
   .home-post-box {
