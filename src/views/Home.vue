@@ -29,7 +29,7 @@
     </div>
     <div class="blog-post-section">
       <div class="home-container">
-        <h3 class="home-sube-title">Here are a few articles that might interest you</h3>
+        <h3 class="home-sub-title">Here are a few articles that might interest you</h3>
         <div class="home-post-box">
           <div class="post-box" v-for="post in HomeBlogCards" :key="post.title">
             <home-blog-card :post="post"></home-blog-card>
@@ -217,6 +217,10 @@ export default {
   padding: 10px;
   border-radius: 5px;
   font-weight: 500;
+}
+.blog-post-section {
+  padding-top: 40px;
+  padding-bottom: 25px;
 }
 .tips-post-section {
   padding-top: 40px;
