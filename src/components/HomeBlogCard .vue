@@ -113,7 +113,7 @@ export default {
   color: var(--light-color);
   height: 100%;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2);
 }
 .post a {

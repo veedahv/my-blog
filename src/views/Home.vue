@@ -252,6 +252,13 @@ export default {
   .home-tip-box {
     grid-template-columns: 1fr 1fr;
   }
+  .landing-container {
+  padding-bottom: 250px;
+}
+  .home-quote {
+    font-size: 17px;
+    line-height: 22px;
+  }
 }
 @media only screen and (max-width: 567px) {
   .landing-container {
@@ -263,7 +270,6 @@ export default {
   }
   .quote-box {
     width: 100%;
-    padding: 35px 40px;
     box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     top: 0;
@@ -272,7 +278,6 @@ export default {
   .home-quote {
     font-size: 16px;
     line-height: 24px;
-    margin: 0;
   }
   .quote-img-box {
     width: 100%;

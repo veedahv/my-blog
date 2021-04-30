@@ -42,7 +42,7 @@ export default {
   color: var(--sec-color);
   height: 100%;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0 0 7px rgba(255, 255, 255, 0.2);
 }
 /* .txt-box {

@@ -13,7 +13,7 @@
         </li>
       </ul>
       <div class="comment-input-box">
-        <div class="comment-input-img">
+        <div class="comment-input-img-box">
           <!-- <img src="../assets/images/author-img/blank-profile-picture.png" alt="" class="comment-input-img" /> -->
           <img :src="imgSrc" alt="user image" class="comment-input-img" />
         </div>
@@ -24,7 +24,7 @@
           id="comment-input"
           placeholder="Write a comment" v-model="newComment"
         />
-        <button class="comment-input-send" @click="addComment">Send</button>
+        <button class="comment-input-send" @click="addComment"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
       </div>
     </div>
   </div>
@@ -68,25 +68,46 @@ export default {
   display: flex;
   align-content: flex-start;
 }
+.comment-input-box {
+  margin-top: 20px;
+}
 .commenter-img,
 .comment-input-img {
-  width: 40px;
-  margin: 5px;
+  /* width: 40px;
+  margin: 5px; */
   border-radius: 50%;
 }
 .commenter-img {
   width: 50px;
   margin-right: 25px;
 }
+.comment-input-img-box {
+  width: 45px;
+  /* padding: 5px; */
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .comment-input-img {
-  width: 40px;
-  margin: 5px;
+  width: 100%;
+  /* margin: 5px; */
 }
 .comment-input {
   padding: 10px 15px;
   width: 100%;
+  outline: none;
+  border: 1px solid var(--sec-color);
 }
 .comment-input-send {
   padding: 10px 25px;
+  /* background: var(--primay-color);
+  color: var(--sec-color); */
+  border: 1px solid var(--sec-color);
+  background: var(--sec-color);
+  color: var(--primay-color);
+  font-size: 25px;
+  outline: none;
+  border: none;
 }
 </style>
