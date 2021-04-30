@@ -57,7 +57,7 @@ export default {
   font-weight: 700;
 }
 .tip-txt {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 8px;
 }
 .time-info {

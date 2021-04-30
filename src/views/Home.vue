@@ -53,21 +53,11 @@
         </div>
       </div>
     </div>
-    <!-- <h2 class="hom-intro">SOON</h2> -->
-    <!-- <h3 class="blog-top">Hey there!</h3>
-    <h4 class="blog-intro">Welcome to my blog!!</h4>
-    <p class="blog-txt">
-      I created it using Vue Js. 
-       Have fun reading!!!
-    </p>
-    <div class="post-box">
-      <iv class="post" v-for="post in postsArr" :key="post.title">
-        <blog-card :post="post"></blog-card>
-      </div> -->
-    <!-- <div class="post" v-for="post in posts" :key="post.title">
-        <blog-card :post="post"></blog-card>
-      </div> -->
-    <!-- </div> -->
+    <div class="quote-post-section">
+      <div class="home-container">
+        <Slider />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -80,12 +70,14 @@ import HomeTipCard from '@/components/HomeTipCard'
 import tipsInfo from "@/tips-info";
 import articleInfo from "@/article-info";
 import HomeBlogCard from "@/components/HomeBlogCard .vue";
+import Slider from "@/components/Slider.vue";
 
 export default {
   name: "Home",
   components: {
     HomeTipCard,
     HomeBlogCard,
+    Slider,
   },
   data() {
     return {
@@ -126,7 +118,7 @@ export default {
 }
 .home-container {
   max-width: 1000px;
-  margin: 10px auto;
+  margin: 0px auto;
   padding: 10px 25px;
 }
 .landing {
@@ -136,7 +128,7 @@ export default {
 }
 .landing-container {
   padding-top: 40px;
-  padding-bottom: 200px;
+  padding-bottom: 225px;
 }
 .landing-box {
   margin: 20px;
@@ -233,7 +225,12 @@ export default {
   display: grid;
   gap: 20px;
   /* grid-template-columns: 1fr 1fr 1fr; */
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.quote-post-section {
+  /* padding-top: 40px;
+  padding-bottom: 100px; */
+  background: var(--primay-color);
 }
 @media only screen and (max-width: 798px) and (min-width: 567px) {
   .post-box:last-of-type {
@@ -248,6 +245,9 @@ export default {
   .home-post-box {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
+  }
+  .home-tip-box {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (max-width: 567px) {

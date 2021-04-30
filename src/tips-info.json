@@ -1,34 +1,50 @@
 [
     {
-        "title": "asfghjkl",
+        "title": "Audience",
         "contents": [
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, consequatur?",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsum natus, eveniet molestias in voluptatum?",
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus magni dolorum odio. Sint, odio dignissimos?"
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
         ]
     },
     {
-        "title": "sfghjkl",
+        "title": "Purpose",
         "contents": [
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, consequatur?",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsum natus, eveniet molestias in voluptatum?",
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus magni dolorum odio. Sint, odio dignissimos?"
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
         ]
     },
     {
-        "title": "sfghjkl",
+        "title": "Style and Tone",
         "contents": [
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, consequatur?",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsum natus, eveniet molestias in voluptatum?",
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus magni dolorum odio. Sint, odio dignissimos?"
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
         ]
     },
     {
-        "title": "tufygihjklnm",
+        "title": "Subject Matter",
         "contents": [
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, consequatur?",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsum natus, eveniet molestias in voluptatum?",
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus magni dolorum odio. Sint, odio dignissimos?"
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+        ]
+    },
+    {
+        "title": "Presentation",
+        "contents": [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
+        ]
+    },
+    {
+        "title": "Reference",
+        "contents": [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit."
         ]
     }
 ]
