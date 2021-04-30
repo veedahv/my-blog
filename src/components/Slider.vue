@@ -22,8 +22,8 @@
       </div>
     </transition-group>
     <div class='carousel-controls'>
-      <button class='carousel-controls__button' @click="previous">prev</button>
-      <button class='carousel-controls__button' @click="next">next</button>
+      <button class='carousel-controls__button' @click="previous"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button>
+      <button class='carousel-controls__button' @click="next"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
     </div>
   </div>
   </div>
@@ -74,10 +74,12 @@ export default {
     next () {
       const first = this.slides.shift()
       this.slides = this.slides.concat(first)
+      this.timer = null;
     },
     previous () {
       const last = this.slides.pop()
       this.slides = [last].concat(this.slides)
+        this.timer = null;
     },
     startSlide: function() {
         this.timer = setInterval(this.next, 5000);
@@ -120,6 +122,27 @@ export default {
   width: 30em;
   min-height: 25em;
 }
+.carousel-controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+.carousel-controls__button {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 25px;
+  /* padding: 25px; */
+  /* padding-top: 0; */
+  margin-top: 0;
+  font-size: 40px;
+  color: var(--sec-color);
+}
+.carousel-controls__button:hover {
+  cursor: pointer;
+}
 .slide {
   /* flex: 0 0 30em; */
   flex: 0 0 28em;
@@ -159,13 +182,15 @@ export default {
 .carousel {  
   /* width: 24em; */
   /* width: 30em; */
-  width: 20em;
+  /* width: 20em; */
+  width: 100%;
   min-height: 25em;
 }
 .slide {
   /* flex: 0 0 30em; */
   /* flex: 0 0 28em; */
-  flex: 0 0 18em;
+  /* flex: 0 0 18em; */
+  flex: 0 0 94%;
   height: 20em;
   /* border-radius: 50%; */
   border-radius: 15px;

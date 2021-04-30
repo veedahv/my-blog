@@ -44,7 +44,7 @@
     </div>
     <div class="tips-post-section">
       <div class="home-container">
-        <h3 class="home-sub-title">Here are a few articles that might interest you</h3>
+        <h3 class="home-sub-title">things to consider when writing an article</h3>
         <div class="home-tip-box">
           <div class="tip-box" v-for="tip in HomeTipsArr" :key="tip.title">
             <!-- <home-blog-card :post="post"></home-blog-card> -->
@@ -55,6 +55,7 @@
     </div>
     <div class="quote-post-section">
       <div class="home-container">
+        <h3 class="home-sub-title">words of wisdom from other readers</h3>
         <Slider />
       </div>
     </div>
@@ -228,9 +229,11 @@ export default {
   grid-template-columns: 1fr 1fr 1fr;
 }
 .quote-post-section {
-  /* padding-top: 40px;
-  padding-bottom: 100px; */
+  padding-top: 40px;
   background: var(--primay-color);
+}
+.quote-post-section .home-sub-title {
+  text-align: center;
 }
 @media only screen and (max-width: 798px) and (min-width: 567px) {
   .post-box:last-of-type {
