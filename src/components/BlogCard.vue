@@ -1,13 +1,10 @@
 <template>
   <div class="post">
     <div class="img-box">
-      <!-- <img :src="post.urlToImage" class="post-img" /> -->
-      <!-- <img :src="require(`@/assets/images/blog-img/cupcake.jpg`)" class="post-img" /> -->
       <img
         :src="require(`@/assets/images/blog-img/${post.urlToImage}.jpg`)"
         class="post-img"
       />
-      <!-- <img :src="require('@/assets/images/blog-img/' + post.urlToImage)" class="post-img" /> -->
     </div>
     <div class="txt-box">
       <div class="author-box">
@@ -27,24 +24,6 @@
         <small class="time-info">{{ post.publishedAt }}</small> &#8226;
         <small class="time-info">{{ post.readTime }}</small>
       </div>
-      <!-- <p class="post-info">{{ post.dscription }}</p> -->
-      <!-- <p class="post-info" v-for="content in post.contents" :key="content">
-        {{ content.contentTxt }}
-      </p> -->
-      <!-- <router-link
-        :to="{
-          name: 'BlogContent',
-          params: {
-            id: post.title,
-            description: post.description,
-            contents: contentsObj,
-            author: post.author,
-            urlToImage: post.urlToImage,
-          },
-        }"
-      >
-        <p class="post-info">{{ post.description }}</p></router-link
-      > -->
       <router-link
         :to="{
           name: 'BlogContent',
@@ -56,10 +35,8 @@
       >
         <p class="post-info">{{ post.description }}</p></router-link
       >
-      <!-- contents: post.contents, -->
     </div>
   </div>
-  <!--item-->
 </template>
 
 <script>
@@ -67,16 +44,8 @@ export default {
   props: ["post"],
   data() {
     return {
-      // contentsObj: this.post.contents,
-      // contentsObj: JSON.stringify(this.post.contents),
       postsObj: JSON.stringify(this.post),
-      // contentsObj: JSON.parse(this.post.contents),
     };
-  },
-  mounted() {
-    // console.log(this.contents);
-    // console.log(this.contentsObj);
-    // console.log(JSON.stringify(this.contentsObj));
   },
 };
 </script>
@@ -84,7 +53,6 @@ export default {
 <style scoped>
 .post {
   display: flex;
-  /* flex-direction: column-reverse; */
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -99,9 +67,6 @@ export default {
   padding-top: 10px;
   flex-basis: 52%;
 }
-/* .txt-box {
-  max-width: 400px;
-} */
 .post-title {
   font-size: 16px;
 }
@@ -111,9 +76,6 @@ export default {
 .post-img {
   width: 100%;
 }
-/* .author-post-info {
-  height: fit-content;
-} */
 .author-box {
   display: flex;
   align-items: center;
@@ -126,14 +88,11 @@ export default {
 }
 .author {
   font-size: 12px;
-  /* margin-top: 4px; */
   margin-bottom: 4px;
 }
 .authorProf {
   font-size: 11px;
   font-weight: 400;
-  /* margin-top: 4px; */
-  /* margin-bottom: 4px; */
 }
 .time-info-box {
   margin-top: 8px;
@@ -142,6 +101,10 @@ export default {
 @media only screen and (max-width: 567px) {
   .post {
     flex-direction: column;
+  }
+  .txt-box {
+    margin-top: 20px;
+    margin-bottom: 25px;
   }
 }
 </style>

@@ -13,11 +13,6 @@
           <label for="nav-checkbox" class="nav-checkbox-label">
             <span class="menu-line">&nbsp;</span>
           </label>
-          <!-- <div class="nav-links">
-          <router-link to="/">Home</router-link>
-          <router-link to="/blog">Blog</router-link>
-        </div> -->
-          <!-- <navigation></navigation> -->
           <div class="navigation">
             <div class="nav-links">
               <router-link to="/">Home</router-link>
@@ -38,7 +33,7 @@
     <footer>
       <div class="body-container">
         <p class="copyright">
-          &#169; 2020 ||
+          &#169; 2021 ||
           <a href="https://victoria-akpan.netlify.app/" class="portfolio"
             >By Veedahv</a
           >
@@ -49,45 +44,8 @@
 </template>
 
 
-<script>
-// import Navigation from "@/components/Navigation.vue";
-
-export default {
-  // name: "Home",
-  // components: {
-  //   Navigation,
-  // },
-  // data() {
-  //   return {
-  //     HomeTipsArr: tipsInfo,
-  //     HomeCardsArr: articleInfo,
-  //     HomeBlogCards: [],
-  //   };
-  // },
-  // mounted() {
-  //   (this.HomeBlogCards = this.HomeCardsArr.slice(0, 3)),
-  //     // (this.HomeBlogCards = this.HomeCardsArr.slice(0, 4)),
-  //     console.log(this.HomeBlogCards);
-  // },
-  // computed: {},
-  // data() {
-  //   return {
-  //     // posts: [],
-  //     postsArr: articleInfo,
-  //   };
-  // },
-};
-</script>
 
 <style>
-/* :root {
-  --primay-color: #f2d43d;
-  --sec-color: #a68524;
-  --tertiary-color: #f2ca52;
-  --light-color: #f2f2f2;
-  --spare-color: #8c8c8c;
-  --white-color: #ffffff;
-} */
 :root {
   --primay-color: #ffe849;
   --sec-color: #4d4d3d;
@@ -104,21 +62,16 @@ export default {
   box-sizing: border-box;
 }
 #app {
-  /* font-family: Avnir, Helvetia, Arial, sans-serif; */
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  /* color: #2c3e50; */
   color: var(--sec-color);
-  /* max-width: 1000px; */
   margin: 5px auto;
-  /* padding: 10px 30px; */
 }
 .nav-container {
   max-width: 1000px;
   margin: 0px auto;
-  padding: 7px 25px;
+  padding: 10px 25px;
 }
 .logo {
   font-size: 25px;
@@ -139,8 +92,6 @@ a {
 }
 
 #nav {
-  /* padding: 10px 5px; */
-  /* justify-content: space-between; */
   align-items: center;
   border-bottom: 4px solid var(--tertiary-color);
   transition: all 5s ease-in-out;
@@ -187,17 +138,13 @@ a {
 
 .nav-authour-box,
 .nav-links {
-  /* padding: 10px 5px; */
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   transition: all 5s ease-in-out;
 }
 .nav-links > * {
   margin-left: 20px;
   font-size: 20px;
-  /* font-weight: 500; */
-  /* font-weight: bolder; */
   font-weight: bold;
 }
 .nav-author-img {
@@ -205,14 +152,18 @@ a {
   border-radius: 50%;
   margin-right: 5px;
 }
+/* .nav-links a.router-link-exact-active {
+  color: var(--primay-color);
+  border-bottom: 2px solid var(--sec-color);
+} */
+.nav-links a:hover {
+  color: var(--tertiary-color);
+}
 
 .copyright {
   text-align: center;
 }
 
-/* #nav a.router-link-exact-active {
-  color: #42b983;
-} */
 @media only screen and (max-width: 567px) {
   .nav-checkbox-label {
     display: flex;

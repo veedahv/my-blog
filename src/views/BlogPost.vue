@@ -1,7 +1,6 @@
 <template>
   <div class="blog-post">
     <h3 class="blog-top">Blog posts</h3>
-    <!-- 3ceee 3 cececceedeeed -->
     <div class="post-box">
       <div class="post" v-for="post in visibleBlogArr" :key="post.title">
         <blog-card :post="post"></blog-card>
@@ -62,7 +61,7 @@ export default {
 .post-box {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 25px;
+  grid-gap: 30px;
   margin: 20px auto;
 }
 </style>
