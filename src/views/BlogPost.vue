@@ -1,24 +1,21 @@
 <template>
   <div class="blog-post">
     <h3 class="blog-top">Blog posts</h3>
-    <!-- <h3 class="blog-top">Hey there!</h3> -->
-    <!-- <h4 class="blog-intro">Welcome to my blog!!</h4>
-    <p class="blog-txt">
-      I created it using Vue Js. 
-       Have fun reading!!!
-    </p> -->
+    <!-- 3ceee 3 cececceedeeed -->
     <div class="post-box">
-      <div class="post" v-for="post in postsArr" :key="post.title">
-        <blog-card :post="post"></blog-card>
-      </div>
-      <!-- <div class="post" v-for="post in posts" :key="post.title">
+      <!-- <div class="post" v-for="post in postsArr" :key="post.title">
         <blog-card :post="post"></blog-card>
       </div> -->
+      <div class="post" v-for="post in visibleBlogArr" :key="post.title">
+        <blog-card :post="post"></blog-card>
+      </div>
     </div>
+    <pagination :postsArr="postsArr" :currentPage="currentPage" :perPage="perPage" v-on:page:update="updatePage"></pagination>
   </div>
 </template>
 
 <script>
+import Pagination from '@/components/Pagination'
 // @ is an alias to /src
 import BlogCard from "@/components/BlogCard.vue";
 import articleInfo from "@/article-info";
@@ -26,14 +23,32 @@ import articleInfo from "@/article-info";
 export default {
   name: 'BlogPost',
   components: {
+    Pagination,
     BlogCard,
   },
   data() {
     return {
       // posts: [],
       postsArr: articleInfo,
-      // posts: JSON.stringify(articleInfo),
+      visibleBlogArr: [],
+      currentPage: 0,
+      perPage: 4,
+      // totalPage: this.postsArr.length,
     };
+  },
+  // computed: {
+  //   pages(){
+  //     return Math.ceil(this.totalBlogs / this.perPage)
+  //   }    
+  // },
+  methods: {
+    updatePage(pageNumber) {
+      this.currentPage = pageNumber;
+      this.visibleBlog();
+    },
+    visibleBlog() {
+      this.visibleBlogArr = this.postsArr.slice((this.currentPage * this.perPage), (this.currentPage * this.perPage + this.perPage));
+    },
   },
   mounted() {
     // fetch(
@@ -43,8 +58,12 @@ export default {
     //   .then((data) => (this.posts = data.articles))
     //   .catch((err) => console.log(err.message));
     
-    // console.log(this.posts);
+    console.log(this.totalPage);
     console.log(this.postsArr);
+    // this.visibleBlog();
+  },
+  beforeMount() {
+    this.visibleBlog();    
   },
 }
 </script>

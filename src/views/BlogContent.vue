@@ -8,6 +8,26 @@
         />
       </div>
       <div class="txt-box">
+        <div class="top-post">
+          <div class="top-post-left">
+            <small class="top-post-author">By {{ postObj.author }} </small>
+            <small class="top-post-published">
+              Published at {{ postObj.publishedAt }}
+            </small>
+          </div>
+          <div class="top-post-right">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            <div class="social-box">
+              <ul class="social-ul">
+                <li class="social-li">
+                  <a href="mailto:" class="">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <h2 class="post-title">{{ id }}</h2>
         <div
           class="post-contents"
@@ -21,7 +41,6 @@
             {{ content.contentTxt }}
           </p>
         </div>
-        <small class="post-author">{{ postObj.author }}</small>
       </div>
     </div>
     <CommentBox></CommentBox>
@@ -85,9 +104,14 @@ export default {
   margin: 10px auto;
   /* justify-content: space-between; */
 }
-/* .txt-box {
-  max-width: 400px;
-} */
+.top-post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-post-published {
+  padding-left: 15px;
+}
 .post-title {
   font-size: 26px;
   margin: 20px 0;
