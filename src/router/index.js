@@ -22,11 +22,6 @@ const routes = [
     name: 'BlogPost',
     component: BlogPost
   },
-  // {
-  //   path: '/*',
-  //   name: 'NotFound',
-  //   component: NotFound
-  // },
   {
     path: '/:catchAll(.*)',
     name: 'NotFound',

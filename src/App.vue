@@ -2,14 +2,15 @@
   <div id="body">
     <div class="nav" id="nav">
       <div class="nav-container">
-      <div class="nav-body">
-        <router-link to="/">VeeBlog</router-link>
-        <div class="nav-links">
+        <div class="nav-body">
+          <router-link to="/" class="logo">VeeBlog</router-link>
+          <!-- <div class="nav-links">
           <router-link to="/">Home</router-link>
           <router-link to="/blog">Blog</router-link>
+        </div> -->
+          <navigation></navigation>
         </div>
       </div>
-    </div>
     </div>
     <router-view />
     <footer>
@@ -24,6 +25,37 @@
     </footer>
   </div>
 </template>
+
+
+<script>
+import Navigation from "@/components/Navigation.vue";
+
+export default {
+  // name: "Home",
+  components: {
+    Navigation,
+  },
+  // data() {
+  //   return {
+  //     HomeTipsArr: tipsInfo,
+  //     HomeCardsArr: articleInfo,
+  //     HomeBlogCards: [],
+  //   };
+  // },
+  // mounted() {
+  //   (this.HomeBlogCards = this.HomeCardsArr.slice(0, 3)),
+  //     // (this.HomeBlogCards = this.HomeCardsArr.slice(0, 4)),
+  //     console.log(this.HomeBlogCards);
+  // },
+  // computed: {},
+  // data() {
+  //   return {
+  //     // posts: [],
+  //     postsArr: articleInfo,
+  //   };
+  // },
+};
+</script>
 
 <style>
 /* :root {
@@ -64,7 +96,11 @@
 .nav-container {
   max-width: 1000px;
   margin: 0px auto;
-  padding: 10px 25px;
+  padding: 7px 25px;
+}
+.logo {
+  font-size: 25px;
+  font-weight: 700;
 }
 .body-container {
   max-width: 1000px;
@@ -82,26 +118,12 @@ a {
   /* display: flex; */
   justify-content: space-between;
   align-items: center;
+  border-bottom: 4px solid var(--tertiary-color);
 }
 .nav-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  text-decoration: none;
-  font-size: 25px;
-}
-
-.nav-links > * {
-  margin-left: 10px;
-}
-
-#nav .portfolio {
-  font-size: 18px;
 }
 
 /* #nav a.router-link-exact-active {

@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="post"> -->
   <div
     class="post"
     :style="{
@@ -9,13 +8,6 @@
         ')',
     }"
   >
-    <!-- <div class="post" :style="{backgroundImage: 'url(`@/assets/images/blog-img/${post.urlToImage}.jpg`)'}"> -->
-    <!-- <div class="img-box">
-      <img
-        :src="require(`@/assets/images/blog-img/${post.urlToImage}.jpg`)"
-        class="post-img"
-      />
-    </div> -->
     <div class="txt-box">
       <small class="time-info">{{ post.readTime }} read time </small>
       <router-link
@@ -44,39 +36,8 @@
           <h4 class="authorProf">{{ post.authorProf }}</h4>
         </div>
       </div>
-      <!-- <p class="post-info">{{ post.dscription }}</p> -->
-      <!-- <p class="post-info" v-for="content in post.contents" :key="content">
-        {{ content.contentTxt }}
-      </p> -->
-      <!-- <router-link
-        :to="{
-          name: 'BlogContent',
-          params: {
-            id: post.title,
-            description: post.description,
-            contents: contentsObj,
-            author: post.author,
-            urlToImage: post.urlToImage,
-          },
-        }"
-      >
-        <p class="post-info">{{ post.description }}</p></router-link
-      > -->
-      <!-- <router-link
-        :to="{
-          name: 'BlogContent',
-          params: {
-            id: post.title,
-            post: postsObj,
-          },
-        }"
-      >
-        <p class="post-info">{{ post.description }}</p></router-link
-      > -->
-      <!-- contents: post.contents, -->
     </div>
   </div>
-  <!--item-->
 </template>
 
 <script>
@@ -84,16 +45,9 @@ export default {
   props: ["post"],
   data() {
     return {
-      // contentsObj: this.post.contents,
       contentsObj: JSON.stringify(this.post.contents),
       postsObj: JSON.stringify(this.post),
-      // contentsObj: JSON.parse(this.post.contents),
     };
-  },
-  mounted() {
-    // console.log(this.contents);
-    // console.log(this.contentsObj);
-    // console.log(JSON.stringify(this.contentsObj));
   },
 };
 </script>
@@ -101,15 +55,10 @@ export default {
 <style scoped>
 .post {
   display: flex;
-  /* flex-direction: column-reverse; */
   align-items: flex-start;
   justify-content: space-between;
-  /* background: var(--light-a-color) center center no-repeat; */
-  /* background: var(--sec-a-color) center center no-repeat; */
   background: var(--sec-color) center center no-repeat;
   background-blend-mode: soft-light;
-  /* background-image: url('require(`@/assets/images/blog-img/${post.urlToImage}.jpg`)'); */
-  /* color: var(--white-color); */
   color: var(--light-color);
   height: 100%;
   padding: 20px;
@@ -120,16 +69,9 @@ export default {
   text-decoration: none;
   color: inherit;
 }
-/* .post > .img-box {
-  flex-basis: 44%;
-} */
 .post > .txt-box {
   padding-top: 10px;
-  /* flex-basis: 52%; */
 }
-/* .txt-box {
-  max-width: 400px;
-} */
 .post-title {
   font-size: 28px;
   font-weight: 700;
@@ -155,23 +97,15 @@ export default {
 }
 .author {
   font-size: 16px;
-  /* margin-top: 4px; */
   margin-bottom: 4px;
 }
 .authorProf {
   font-size: 14px;
   font-weight: 400;
-  /* margin-top: 4px; */
-  /* margin-bottom: 4px; */
 }
 .time-info {
   margin-top: 10px;
   margin-bottom: 10px;
   display: inline-block;
 }
-/* @media only screen and (max-width: 567px) {
-  .post {
-    flex-direction: column;
-  }
-} */
 </style>

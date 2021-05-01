@@ -115,7 +115,7 @@ export default {
 
 <style scoped>
 .home {
-  margin: 10px auto;
+  margin: 0px auto;
 }
 .home-container {
   max-width: 1000px;
@@ -182,6 +182,7 @@ export default {
   /* margin-top: 20px; */
   font-size: 25px;
   text-transform: capitalize;
+  text-align: center;
 }
 
 .home-post-box {
@@ -231,9 +232,6 @@ export default {
 .quote-post-section {
   padding-top: 40px;
   background: var(--primay-color);
-}
-.quote-post-section .home-sub-title {
-  text-align: center;
 }
 @media only screen and (max-width: 798px) and (min-width: 567px) {
   .post-box:last-of-type {
