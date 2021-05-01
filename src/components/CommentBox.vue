@@ -14,7 +14,6 @@
       </ul>
       <div class="comment-input-box">
         <div class="comment-input-img-box">
-          <!-- <img src="../assets/images/author-img/blank-profile-picture.png" alt="" class="comment-input-img" /> -->
           <img :src="imgSrc" alt="user image" class="comment-input-img" />
         </div>
         <input
@@ -76,6 +75,12 @@ export default {
   /* width: 40px;
   margin: 5px; */
   border-radius: 50%;
+}
+.comment-txt {
+  margin-top: 10px;
+}
+.commenter {
+  margin-top: 5px;
 }
 .commenter-img {
   width: 50px;

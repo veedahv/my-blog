@@ -1,29 +1,14 @@
 <template>
   <div class="post-container">
     <div class="post">
+      <div class="img-box">
+        <img
+          :src="require(`@/assets/images/blog-img/${postObj.urlToImage}.jpg`)"
+          class="post-img"
+        />
+      </div>
       <div class="txt-box">
         <h2 class="post-title">{{ id }}</h2>
-        <!-- <p class="post-info">{{ description }}</p> -->
-        <!-- <p class="post-info">
-          {{ contentsObj }}
-        </p> -->
-        <!-- <p class="post-info" v-for="content in contentsObj" :key="content">
-          {{ content }}
-        </p> -->
-        <!-- <div
-          class="post-contents"
-          v-for="content in contentsObj"
-          :key="content"
-        >
-          <h3 class="post-title" v-if="content.subTitle">
-            {{ content.subTitle }}
-          </h3>
-          <p class="post-info">
-            {{ content.contentTxt }}
-          </p>
-        </div>
-        <small class="post-author">{{ author }}</small>
-      </div> -->
         <div
           class="post-contents"
           v-for="content in postObj.contents"
@@ -37,17 +22,6 @@
           </p>
         </div>
         <small class="post-author">{{ postObj.author }}</small>
-      </div>
-      <div class="img-box">
-        <img
-          :src="require(`@/assets/images/blog-img/${postObj.urlToImage}.jpg`)"
-          class="post-img"
-        />
-        <!-- <img
-          :src="require(`@/assets/images/blog-img/${urlToImage}.jpg`)"
-          class="post-img"
-        /> -->
-        <!-- <img :src="post.urlToImage" width="153" height="130" /> -->
       </div>
     </div>
     <CommentBox></CommentBox>
@@ -93,11 +67,10 @@ export default {
   max-width: 1000px;
   padding: 10px 25px;
   margin: 10px auto;
-  /* justify-content: space-between; */
 }
 .post {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   /* max-width: 700px; */
   width: 90%;

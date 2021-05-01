@@ -140,9 +140,10 @@ a {
 
 #nav {
   /* padding: 10px 5px; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   border-bottom: 4px solid var(--tertiary-color);
+  transition: all 5s ease-in-out;
 }
 .nav-body {
   display: flex;
@@ -190,6 +191,7 @@ a {
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
+  transition: all 5s ease-in-out;
 }
 .nav-links > * {
   margin-left: 20px;
@@ -219,9 +221,13 @@ a {
   .navigation {
     display: none;
     width: 100%;
+  /* transition: all 5s ease-in-out; */
+    height: 0px;
   }
   .nav-checkbox:checked ~ .navigation {
     display: block;
+    height: fit-content;
+    /* background: turquoise; */
   }
   .nav-checkbox-label:hover .menu-line::before {
     top: -9px;
