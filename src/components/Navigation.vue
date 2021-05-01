@@ -1,16 +1,16 @@
 <template>
   <div class="navigation">
-        <div class="nav-links">
-          <router-link to="/">Home</router-link>
-          <router-link to="/blog">Blog</router-link>
-          <div class="nav-authour-box">
-          <img
-            :src="require(`@/assets/images/author-img/blog-author.jpg`)"
-            class="nav-author-img"
-          />
-          <p class="nav-author">Marylene Ibuoteto</p>
-          </div>
-        </div>
+    <div class="nav-links">
+      <router-link to="/">Home</router-link>
+      <router-link to="/blog">Blog</router-link>
+      <div class="nav-authour-box">
+        <img
+          :src="require(`@/assets/images/author-img/blog-author.jpg`)"
+          class="nav-author-img"
+        />
+        <p class="nav-author">Marylene Ibuoteto</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -53,9 +53,17 @@ export default {
   border-radius: 50%;
   margin-right: 5px;
 }
-/* @media only screen and (max-width: 567px) {
-  .post {
-    flex-direction: column;
+@media only screen and (max-width: 567px) {
+  .navigation {
+    width: 100%;
   }
-} */
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-links > * {
+    margin-left: 0px;
+    padding: 15px 25px;
+  }
+}
 </style>

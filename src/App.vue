@@ -4,11 +4,33 @@
       <div class="nav-container">
         <div class="nav-body">
           <router-link to="/" class="logo">VeeBlog</router-link>
+          <input
+            type="checkbox"
+            name=""
+            id="nav-checkbox"
+            class="nav-checkbox"
+          />
+          <label for="nav-checkbox" class="nav-checkbox-label">
+            <span class="menu-line">&nbsp;</span>
+          </label>
           <!-- <div class="nav-links">
           <router-link to="/">Home</router-link>
           <router-link to="/blog">Blog</router-link>
         </div> -->
-          <navigation></navigation>
+          <!-- <navigation></navigation> -->
+          <div class="navigation">
+            <div class="nav-links">
+              <router-link to="/">Home</router-link>
+              <router-link to="/blog">Blog</router-link>
+              <div class="nav-authour-box">
+                <img
+                  :src="require(`@/assets/images/author-img/blog-author.jpg`)"
+                  class="nav-author-img"
+                />
+                <p class="nav-author">Marylene Ibuoteto</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -28,13 +50,13 @@
 
 
 <script>
-import Navigation from "@/components/Navigation.vue";
+// import Navigation from "@/components/Navigation.vue";
 
 export default {
   // name: "Home",
-  components: {
-    Navigation,
-  },
+  // components: {
+  //   Navigation,
+  // },
   // data() {
   //   return {
   //     HomeTipsArr: tipsInfo,
@@ -102,6 +124,9 @@ export default {
   font-size: 25px;
   font-weight: 700;
 }
+.nav-checkbox {
+  display: none;
+}
 .body-container {
   max-width: 1000px;
   margin: 10px auto;
@@ -115,7 +140,6 @@ a {
 
 #nav {
   /* padding: 10px 5px; */
-  /* display: flex; */
   justify-content: space-between;
   align-items: center;
   border-bottom: 4px solid var(--tertiary-color);
@@ -124,9 +148,92 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+.nav-checkbox-label {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 1px;
+  cursor: pointer;
+}
+
+.menu-line {
+  position: relative;
+}
+.menu-line,
+.menu-line::after,
+.menu-line::before {
+  background: var(--sec-color);
+  width: 25px;
+  height: 2px;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.menu-line::after,
+.menu-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.menu-line::before {
+  top: -8px;
+}
+.menu-line::after {
+  top: 8px;
+}
+
+.nav-authour-box,
+.nav-links {
+  /* padding: 10px 5px; */
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+.nav-links > * {
+  margin-left: 20px;
+  font-size: 20px;
+  /* font-weight: 500; */
+  /* font-weight: bolder; */
+  font-weight: bold;
+}
+.nav-author-img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+
+
+.copyright {
+  text-align: center;
 }
 
 /* #nav a.router-link-exact-active {
   color: #42b983;
 } */
+@media only screen and (max-width: 567px) {
+  .nav-checkbox-label {
+    display: flex;
+  }
+
+
+
+  .navigation {
+    display: none;
+    width: 100%;
+  }
+  .nav-checkbox:checked ~ .navigation {
+    display: block;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-links > * {
+    margin-left: 0px;
+    padding: 15px 25px;
+  }
+}
 </style>
