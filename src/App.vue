@@ -204,8 +204,6 @@ a {
   margin-right: 5px;
 }
 
-
-
 .copyright {
   text-align: center;
 }
@@ -218,14 +216,29 @@ a {
     display: flex;
   }
 
-
-
   .navigation {
     display: none;
     width: 100%;
   }
   .nav-checkbox:checked ~ .navigation {
     display: block;
+  }
+  .nav-checkbox-label:hover .menu-line::before {
+    top: -9px;
+  }
+  .nav-checkbox-label:hover .menu-line::after {
+    top: 9px;
+  }
+  .nav-checkbox:checked ~ .nav-checkbox-label .menu-line {
+    background: transparent;
+  }
+  .nav-checkbox:checked ~ .nav-checkbox-label .menu-line::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  .nav-checkbox:checked ~ .nav-checkbox-label .menu-line::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
   .nav-links {
     flex-direction: column;
