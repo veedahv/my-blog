@@ -9,14 +9,18 @@
             name=""
             id="nav-checkbox"
             class="nav-checkbox"
+            :checked="boxChecked"
           />
-          <label for="nav-checkbox" class="nav-checkbox-label">
+          <!-- <label for="nav-checkbox" class="nav-checkbox-label" @click="navToggle()">
             <span class="menu-line">&nbsp;</span>
-          </label>
+          </label> -->
+          <span for="nav-checkbox" class="nav-checkbox-label" @click="navToggle()">
+            <span class="menu-line">&nbsp;</span>
+          </span>
           <div class="navigation">
             <div class="nav-links">
-              <router-link to="/">Home</router-link>
-              <router-link to="/blog">Blog</router-link>
+              <router-link to="/" @click="navClose">Home</router-link>
+              <router-link to="/blog" @click="navClose">Blog</router-link>
               <div class="nav-authour-box">
                 <img
                   :src="require(`@/assets/images/author-img/blog-author.jpg`)"
@@ -42,6 +46,34 @@
     </footer>
   </div>
 </template>
+
+
+<script>
+// import CommentBoxVue from './components/CommentBox.vue';
+export default {
+  data() {
+    return {
+      // imgSrc: require('../assets/images/author-img/blank-profile-picture.png'),
+      // commentAuthor: 'Anonymous',
+      // commentTxts: ['fghjkghjk'],
+      // newComment: '',
+      // commentState: true,
+      boxChecked: false,
+    };
+  },
+  methods: {
+    navToggle() {
+      this.boxChecked = !this.boxChecked;
+      console.log(this.boxChecked);
+    },
+    navClose() {
+      this.boxChecked = false;
+      console.log(this.boxChecked);
+    }
+  },
+  // props: ["post"],
+};
+</script>
 
 
 

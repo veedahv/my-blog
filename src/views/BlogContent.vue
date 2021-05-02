@@ -24,6 +24,21 @@
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                   </a>
                 </li>
+                <li class="social-li">
+                  <a href="mailto:" class="">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="social-li">
+                  <a href="mailto:" class="">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="social-li">
+                  <a href="mailto:" class="">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -52,32 +67,15 @@
 import CommentBox from "../components/CommentBox";
 export default {
   components: { CommentBox },
-  // props: {
-  //   id: String,
-  //   description: String,
-  //   contents: Object,
-  //   author: String,
-  //   urlToImage: String,
-  // },
-  // props: ["id", "description", "contents", "author", "urlToImage"],
   props: ["post", "id"],
-  // props: ["id", "contents", "author", "urlToImage"],
   data() {
     return {
-      // contentsObj: this.contents,
-      // contentsObj: JSON.parse(this.contents),
       postObj: JSON.parse(this.post),
-      // post: this.$route.params.post,
-      // description: this.$route.params.description,
-      // id: this.$route.params.id
     };
   },
   mounted() {
     console.log(this.postObj);
-    // console.log(this.contents);
-    // console.log(this.contentsObj);
   },
-  // props: ["id", "description", "author", "urlToImage"],
 };
 </script>
 
@@ -104,6 +102,9 @@ export default {
   margin: 10px auto;
   /* justify-content: space-between; */
 }
+.fa-ellipsis-v {
+  display: none;
+}
 .top-post {
   display: flex;
   align-items: center;
@@ -111,6 +112,16 @@ export default {
 }
 .top-post-published {
   padding-left: 15px;
+}
+.social-box {
+  position: relative;
+}
+.social-ul {
+  list-style: none;
+  display: flex;
+}
+.social-li {
+  margin-left: 15px;
 }
 .post-title {
   font-size: 26px;
@@ -131,6 +142,17 @@ export default {
 @media only screen and (max-width: 567px) {
   .post {
     width: 100%;
+  }
+  .fa-ellipsis-v {
+    display: inline-block;
+  }
+  .social-ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    padding: 10px;
+    top: 0;
+    right: 0;
   }
 }
 </style>

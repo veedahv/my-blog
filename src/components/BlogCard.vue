@@ -33,7 +33,7 @@
           },
         }"
       >
-        <p class="post-info">{{ post.description }}</p></router-link
+        <p class="post-info">{{ post.description }}..</p></router-link
       >
     </div>
   </div>
