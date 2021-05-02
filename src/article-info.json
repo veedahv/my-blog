@@ -223,7 +223,7 @@
         "comments": []
     },
     {
-        "title": "My first on a skateboard. The thrill!!",
+        "title": "My first time on a skateboard. The thrill!!",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
         "authorImg": "blog-author",
@@ -313,6 +313,56 @@
             {
                 "subTitle": "",
                 "contentTxt": "Joy delightful global boutique eclectic. Discerning concierge impeccable essential Melbourne wardrobe Zürich, vibrant pintxos ANA punctual international Shinkansen. Artisanal discerning Airbus A380 ryokan Asia-Pacific carefully curated pintxos soft power vibrant first-class. Business class handsome Melbourne, Airbus A380 the best destination Nordic iconic K-pop izakaya sophisticated conversation. Wardrobe Toto Marylebone quality of life remarkable bureaux, Ginza eclectic discerning Asia-Pacific airport lovely sleepy Washlet Lufthansa. K-pop Sunspel first-class, efficient pintxos izakaya vibrant lovely Zürich Porter Shinkansen hub."
+            }
+        ],
+        "comments": []
+    },
+    {
+        "title": "Breakfast, the most important meal of the day should be enjoyed not rushed!",
+        "author": "Marylene Ibuoteto",
+        "authorProf": "Professional hustler",
+        "authorImg": "blog-author",
+        "urlToImage": "breakfast",
+        "description": "Lavender lemonade spring roasted peanuts Italian homemade vine tomatoes red fresh shallots banh mi salad rolls coconut cocoa earl grey latte peanut butter rich coconut cream.",
+        "readTime": "5 minutes",
+        "publishedAt": "4 april, 2020",
+        "contents": [
+            {
+                "subTitle": "Morning Smoothie Bowl Peppermint Blast Green Tea Vitamin Glow",
+                "contentTxt": ""
+            },
+            {
+                "subTitle": "Toasted Hazelnuts Coriander Quinoa Flatbread",
+                "contentTxt": "Pinch of yum earl grey latte cremini mushrooms peanut butter crunch green pepper coconut rice peach strawberry mango lemon tahini dressing cherry bomb pepper onion Thai sun pepper enchiladas sweet potato black bean burrito cayenne sesame soba noodles black bean wraps cinnamon cherry bomb parsley paprika coconut cherry blueberry chia seed jam. Hearts of palm tabasco pepper bruschetta plums mediterranean luxury bowl avocado oranges cool cucumbers Italian pepperoncini guacamole spicy coriander smoky maple tempeh glaze sweet potato ultimate."
+            },
+            {
+                "subTitle": "Refreshing Cucumber Splash Cilantro Lime Vinaigrette",
+                "contentTxt": "Picnic salad falafel bites spicy ginger carrot spiced juice Thai sun pepper apricot smoky maple tempeh glaze roasted brussel sprouts soup Thai basil curry crunchy banana bread citrusy parsley. Onion cranberry spritzer golden cayenne pepper hummus with Indian spiced almond milk chai latte frosted gingerbread bites mangos sweet potato black bean burrito Caribbean red habanero roasted butternut squash udon noodles."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "Spicy jalapeno bacon ipsum dolor amet ullamco dolor in ut. Tri-tip fugiat short ribs hamburger flank aliquip porchetta t-bone eu in sirloin sed picanha doner. Turkey pancetta pariatur ut reprehenderit in burgdoggen commodo cupidatat non swine drumstick sed. Chislic dolore shoulder, ball tip ullamco adipisicing cow ad shankle rump tri-tip elit short loin."
+            },
+            {
+                "subTitle": "Frosted Gingerbread Bites Fruit Smash",
+                "contentTxt": "Babybel chalk and cheese cheddar. Melted cheese lancashire pepper jack who moved my cheese cheese triangles goat chalk and halloumi. Red leicester fromage frais queso pecorino manchego cheesy grin boursin halloumi. Feta dolcelatte cheesecake edam lancashire cheesy grin pecorino stilton. Croque monsieur say cheeseburger taleggio when comes out everybody's happy paneer halloumi on toast ricotta halloumi pepper jack. Mozzarella. Flank elit ullamco consectetur dolor ham boudin ut leberkas cow jowl anim tempor buffalo. Shoulder aliqua ribeye, frankfurter meatloaf labore shankle sint rump. Brisket aute pork loin, id occaecat pastrami ut ea turkey swine officia est frankfurter."
+            }
+        ],
+        "comments": []
+    },
+    {
+        "title": "Ayy",
+        "author": "Marylene Ibuoteto",
+        "authorProf": "Professional hustler",
+        "authorImg": "blog-author",
+        "urlToImage": "skincare",
+        "description": "",
+        "readTime": "5 minutes",
+        "publishedAt": "4 april, 2020",
+        "contents": [
+            {
+                "subTitle": "",
+                "contentTxt": ""
             }
         ],
         "comments": []
