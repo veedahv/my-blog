@@ -85,7 +85,7 @@
         </div>
       </div>
     </div>
-    <CommentBox :comments="content.comments"></CommentBox>
+    <CommentBox v-if="post" :comments="post.comments"></CommentBox>
   </div>
 </template>
 
