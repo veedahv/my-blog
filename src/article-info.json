@@ -329,7 +329,7 @@
         "contents": [
             {
                 "subTitle": "Morning Smoothie Bowl Peppermint Blast Green Tea Vitamin Glow",
-                "contentTxt": ""
+                "contentTxt": "Everyone loves manchego danish fontina goat. Cottage cheese melted cheese pecorino macaroni cheese red leicester cheese and biscuits monterey jack cheesy feet. Almond milk mediterranean vegetables potato blueberry chia seed jam onion jalapeño one bowl green papaya salad with cool tabasco pepper red pepper hummus falafel bowl banana bread shiitake mushrooms veggie burgers winter summertime quinoa flatbread green grapes strawberry mango smoothie smoky maple tempeh glaze fresh. Creamy cauliflower alfredo sauce apple vinaigrette cookies cozy cinnamon oatmeal lemon sleepy morning tea."
             },
             {
                 "subTitle": "Toasted Hazelnuts Coriander Quinoa Flatbread",
@@ -351,18 +351,157 @@
         "comments": []
     },
     {
-        "title": "Ayy",
+        "title": "The best care for melanin skin",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
         "authorImg": "blog-author",
         "urlToImage": "skincare",
-        "description": "",
+        "description": "Vel commodo. Eiusmod vel modi and explicabo. Proident iste vitae. Exercitation proident nor ipsam aliquam nor tempora. Aut laboris amet explicabo omnis. Illo minima rem or ipsa. Excepteur.",
+        "readTime": "5 minutes",
+        "publishedAt": "4 april, 2020",
+        "contents": [
+            {
+                "subTitle": "What you need to know first",
+                "contentTxt": "Quam tempor quisquam yet velitesse aliquam but eiusmod. Omnis. Quis commodi sequi. Quae. Error quisquam yet lorem or exercitationem, autem so quo. Lorem corporis but excepteur nor consequuntur perspiciatis for totam nor adipisicing. Minima. Nostrum consectetur and minima sint numquam. Architecto. Enim. Tempora elit for aperiam enim ea suscipit sit. Odit quia, yet omnis. Exercitationem dolorem for consequatur, eaque nor laboris. Eius et or nesciunt yet quisquam nor eiusmod. Ad nemo nor tempor but quia quisquam. Aut veniam illum. Lorem molestiae accusantium for eos nor ullamco for modi but dolorem. Quasi. Anim sed for explicabo and explicabo ipsam."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "Duis mollit or aperiam sit, nostrud eu, but quae. Natus tempora cupidatat. Exercitation non yet vel unde and vitae inventore, adipisicing. Nulla magna vel, and dolor. Nesciunt inventore."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "Adipisicing autem. Ullamco dicta. Eu ipsum qui ea, et dolores quo. Sint nequeporro sunt and magnam, quia. Exercitation commodi. Perspiciatis esse perspiciatis magnam, yet tempora. Sequi. Est. Natus id. Aut. Vel sunt. Sit. Error explicabo quia and incididunt so lorem modi. Sequi modi yet et. Aut amet, but culpa quam anim nihil, yet perspiciatis."
+            },
+            {
+                "subTitle": "Are you ready for the truth?",
+                "contentTxt": "Molestiae molestiae and est yet adipisci. Sunt commodi numquam autem and tempor or reprehenderit and do. Sit tempor aliquam iure and quo and aliquip, consequat. Nemo eu eum or quis enim, and aliquip. Ipsam. Mollit dolor. Ullamco error dolore. Dicta ipsum doloremque. Aperiam elit nulla. Adipisicing quo but veniam but adipisicing eos reprehenderit laboris. Ab autem nor ipsam pariatur so velitesse. Id consequatur, and excepteur deserunt fugit ipsa, consequatur. Nesciunt eos, and aspernatur. Nostrud duis for accusantium, reprehenderit quam. Iste ea so deserunt nemo mollit. Dolorem consequatur but ipsum lorem but doloremque but exercitationem nulla. Iste. Odit ab beatae or quaerat eius. Ex occaecat nor laudantium so ullamco or in. Modi autem numquam."
+            },
+            {
+                "subTitle": "In summary",
+                "contentTxt": "Nihil magnam sed ea. Ipsam tempora so totam sint, nor laborum for fugiat ullam. Quae ad vitae. Aperiam quia. Commodo sequi architecto exercitation. Id sed but commodi si and sint but nesciunt. Fugiat iure. Do eos for dicta yet dolores. Sequi unde and illum or incidunt excepteur. Nulla cillum so dolorem. Aut est quisquam, eum. Duis. Cupidatat nesciunt so tempora. Inventore."
+            }
+        ],
+        "comments": []
+    },
+    {
+        "title": "Why I have always hoped to visit space someday",
+        "author": "Marylene Ibuoteto",
+        "authorProf": "Professional hustler",
+        "authorImg": "blog-author",
+        "urlToImage": "space",
+        "description": "The Earth is the only world known so far to harbor life. Visit, yes. Settle, not yet. Like it or not, for the moment the Earth is where we make our stand.",
+        "readTime": "5 minutes",
+        "publishedAt": "4 april, 2020",
+        "contents": [
+            {
+                "subTitle": "Here's why I dream of visiting space.",
+                "contentTxt": "There is no strife, no prejudice, no national conflict in outer space as yet. Its hazards are hostile to us all. Its conquest deserves the best of all mankind, and its opportunity for peaceful cooperation many never come again. But why, some say, the moon? Why choose this as our goal? And they may well ask why climb the highest mountain? Why, 35 years ago, fly the Atlantic? Why does Rice play Texas?"
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "I believe that space travel will one day become as common as airline travel is today. I’m convinced, however, that the true future of space travel does not lie with government agencies — NASA is still obsessed with the idea that the primary purpose of the space program is science — but real progress will come from private companies competing to provide the ultimate adventure ride, and NASA will receive the trickle-down benefits."
+            },
+            {
+                "subTitle": "It would feel great to touch the sun.",
+                "contentTxt": "We choose to go to the moon. We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "It has been said that astronomy is a humbling and character-building experience. There is perhaps no better demonstration of the folly of human conceits than this distant image of our tiny world. To me, it underscores our responsibility to deal more kindly with one another, and to preserve and cherish the pale blue dot, the only home we've ever known."
+            },
+            {
+                "subTitle": "Why I want to meet the aliens.",
+                "contentTxt": "Look again at that dot. That's here. That's home. That's us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every \"superstar,\" every \"supreme leader,\" every saint and sinner in the history of our species lived there--on a mote of dust suspended in a sunbeam."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "The Earth is a very small stage in a vast cosmic arena. Think of the rivers of blood spilled by all those generals and emperors so that, in glory and triumph, they could become the momentary masters of a fraction of a dot. Think of the endless cruelties visited by the inhabitants of one corner of this pixel on the scarcely distinguishable inhabitants of some other corner, how frequent their misunderstandings, how eager they are to kill one another, how fervent their hatreds."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves."
+            }
+        ],
+        "comments": []
+    },
+    {
+        "title": "You can not shame the shameless",
+        "author": "Marylene Ibuoteto",
+        "authorProf": "Professional hustler",
+        "authorImg": "blog-author",
+        "urlToImage": "ment",
+        "description": "Ad nemo, si. Ab est and do ullam. Tempor veniam elit and fugiat. Id eos voluptas and laborum. Ea velitesse for sint exercitation, so suscipit officia and dolores. Quo tempor nor si or reprehenderit.",
         "readTime": "5 minutes",
         "publishedAt": "4 april, 2020",
         "contents": [
             {
                 "subTitle": "",
-                "contentTxt": ""
+                "contentTxt": "Proident aut or consequat quam fugiat. Magnam et architecto, pariatur nor laboriosam or nulla or minim. Natus dolorem rem and fugit yet omnis nor si but quasi. Tempor consequatur fugiat so ipsa so non or reprehenderit. Explicabo elit nor aliqua and dolore nostrud numquam. Unde voluptas nor beatae perspiciatis yet labore lorem anim."
+            },
+            {
+                "subTitle": "Why you can not shame the shameless",
+                "contentTxt": "Mollit. Aut tempor so lorem or autem for amet. Corporis sit esse and quo cupidatat sequi. Ea error laborum. Natus quo. Ea fugiat and reprehenderit nemo. Architecto ullamco for rem, quo. Rem sed. Fugiat quo dolores but adipisicing totam or adipisci sint. Quia reprehenderit but rem nor ad magnam. Sint. Ipsam magni quisquam for odit, sequi and aliquam for in. Ullamco aliqua aut labore. Labore magna but natus. Excepteur. Magna elit beatae and in aspernatur. Excepteur minima so ipsam and consequat."
+            },
+            {
+                "subTitle": "Proof you can not shame the shameless",
+                "contentTxt": "Architecto cillum or tempora totam for commodo and ipsam but eum. Beatae vel for laboris or iure so non consequuntur. Aut mollit so beatae. Nostrum ut. Enim do id quam, veniam, nostrum so culpa. Exercitationem dolorem dicta amet. Magni ad yet excepteur sunt, nor ullam or eiusmod for lorem. Natus odit so aliquid for quisquam. Ratione. Rem laboriosam or adipisci. Quisquam error adipisci enim. Ipsum corporis dolor, and perspiciatis proident. Commodo. Laborum aspernatur, quo."
+            },
+            {
+                "subTitle": "Suspicions on how to shame the shameless",
+                "contentTxt": "Sed quis, yet deserunt but voluptas. Quia iste. Id perspiciatis or nulla. Mollit. Dolores enim, so eiusmod, rem for eius nor nesciunt. Iure quisquam nor ullamco for modi nor incididunt. Dolorem accusantium in or accusantium."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "Aliquip esse or mollit for modi. In voluptas or aliquam unde magna so consequat but vitae. Quia vitae nor aliqua, ipsa accusantium sint."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "Consequuntur commodo but aliqua lorem so commodi autem. Natus fugit so unde nor error cupidatat nihil so reprehenderit. Proident eaque, voluptate. Veritatis inventore fugit yet mollit velitesse ut."
+            }
+        ],
+        "comments": []
+    },
+    {
+        "title": "Problem no de finish! Try de enjoy life small.",
+        "author": "Marylene Ibuoteto",
+        "authorProf": "Professional hustler",
+        "authorImg": "blog-author",
+        "urlToImage": "fun",
+        "description": "Aut excepteur and sunt but aliquam adipisicing. Aliquam dolore or dolores so est esse. Suscipit in tempora and nemo for fugiat. Non. Eaque ratione dolore quia commodi totam.",
+        "readTime": "5 minutes",
+        "publishedAt": "4 april, 2020",
+        "contents": [
+            {
+                "subTitle": "How to have fun",
+                "contentTxt": "Consequuntur. Eum quae nor eos sed fugit yet quaerat. Incidunt nihil laudantium dolore for voluptatem. Commodi aspernatur or unde yet perspiciatis labore, nequeporro. Deserunt duis incidunt, adipisicing for reprehenderit beatae for velitesse. Ipsum laboriosam cupidatat error. Dolore. Ab velitesse."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "Ipsam illo nesciunt nor non. Lorem magna velit. Consectetur. Veritatis nostrum nostrum, laborum, and aliquam nostrum but doloremque. Pariatur dolorem. Reprehenderit anim accusantium nor unde ullamco ipsa or nulla."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "Non excepteur beatae laboriosam ullam commodi but excepteur. Labore aliquip anim lorem. Pariatur modi nor inventore so minim nihil but ipsa enim. Quis aliquam so voluptatem quae or dicta, exercitationem or enim. Quis elit laborum inventore dolore nequeporro ab."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "Voluptate architecto for ullam. Eiusmod nulla and molestiae anim or elit. Deserunt nisi aspernatur. Amet iste. Explicabo laborum nor iste nostrud and deserunt."
+            },
+            {
+                "subTitle": "Where to have fun",
+                "contentTxt": "Quasi ad but fugit, and nemo. Pariatur incidunt elit voluptas reprehenderit, for consequuntur nor magni. Beatae omnis, nor minim. Minim officia in or duis beatae quaerat. Beatae officia. Voluptatem. Eu molestiae, tempor explicabo dolor. Amet voluptate yet cupidatat lorem. Incididunt occaecat incidunt yet consequatur but minim dolor enim. Sequi quo. Magnam dolores but cillum officia architecto. Dolor dolores. Quasi sunt yet quisquam. Excepteur voluptatem, rem nemo ullam nor aut rem. Consequuntur nostrum dicta for nulla odit magna yet iste. Numquam ullamco illo, and fugit. Iste odit so fugit and laudantium but modi aliqua nor quam. Totam. Et consequatur. Minima velitesse eu but ipsa yet nesciunt exercitationem."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "Magnam totam. Dolores quia excepteur. Nequeporro rem, aliquid, for odit dicta yet eum for nulla. Inventore nisi eius, for dolorem so aliquam for aspernatur. Dolores qui so quam so doloremque consequat but nisi. Deserunt doloremque nor minima ipsam yet corporis, exercitation beatae."
+            },
+            {
+                "subTitle": "When to have fun",
+                "contentTxt": "Aspernatur. Quae natus so sunt. Nihil tempor ullamco, or proident illo or nulla. Irure quaerat. Fugiat amet or cillum. Aliquip non. Do amet, nulla do nihil but proident. Nihil ipsa. Suscipit deserunt. Laboriosam anim qui. Lorem ipsam velitesse yet eos and suscipit. Ad tempor yet cillum and minim, minim mollit, or sequi. Sed velit exercitation but elit. Eos. Sed illo."
+            },
+            {
+                "subTitle": "",
+                "contentTxt": "Laboriosam nesciunt architecto, for nequeporro eaque. Lorem nihil, but veritatis voluptatem nostrud. Ullamco quaerat, and enim, so iste or tempora. Id dolores. Veritatis. Esse magna and suscipit, exercitationem velit, and perspiciatis ullamco."
             }
         ],
         "comments": []

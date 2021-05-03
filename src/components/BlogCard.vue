@@ -19,7 +19,17 @@
           <h4 class="authorProf">{{ post.authorProf }}</h4>
         </div>
       </div>
-      <h2 class="post-title">{{ post.title }}</h2>
+      <router-link
+        :to="{
+          name: 'BlogContent',
+          params: {
+            id: post.title,
+            post: postsObj,
+          },
+        }"
+      >
+        <h2 class="post-title">{{ post.title }}</h2>
+      </router-link>
       <div class="time-info-box">
         <small class="time-info">{{ post.publishedAt }}</small> &#8226;
         <small class="time-info">{{ post.readTime }}</small>
@@ -33,8 +43,8 @@
           },
         }"
       >
-        <p class="post-info">{{ post.description }}..</p></router-link
-      >
+        <p class="post-info">{{ post.description }}..</p>
+      </router-link>
     </div>
   </div>
 </template>

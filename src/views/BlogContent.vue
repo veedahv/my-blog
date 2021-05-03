@@ -20,23 +20,43 @@
             <div class="social-box">
               <ul class="social-ul">
                 <li class="social-li">
-                  <a href="mailto:" class="">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <a href="mailto:hello@blog.me" class="">
+                    <span class="social-icon">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                    <span class="social-name">hello@blog.me</span>
                   </a>
                 </li>
                 <li class="social-li">
-                  <a href="mailto:" class="">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <a href="tel:+01128754424" class="">
+                    <span class="social-icon">
+                      <i class="fa fa-phone-square" aria-hidden="true"></i>
+                    </span>
+                    <span class="social-name">+01128754424</span>
                   </a>
                 </li>
                 <li class="social-li">
-                  <a href="mailto:" class="">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <a href="" class="">
+                    <span class="social-icon">
+                      <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    </span>
+                    <span class="social-name">@MaryleneIbuoteto</span>
                   </a>
                 </li>
                 <li class="social-li">
-                  <a href="mailto:" class="">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <a href="" class="">
+                    <span class="social-icon">
+                      <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    </span>
+                    <span class="social-name">Marylene Ibuoteto</span>
+                  </a>
+                </li>
+                <li class="social-li">
+                  <a href="" class="">
+                    <span class="social-icon">
+                      <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    </span>
+                    <span class="social-name">Marylene Ibuoteto</span>
                   </a>
                 </li>
               </ul>
@@ -123,6 +143,10 @@ export default {
 .social-li {
   margin-left: 15px;
 }
+.social-name {
+  display: none;
+  padding-left: 10px;
+}
 .post-title {
   font-size: 26px;
   margin: 20px 0;
@@ -143,8 +167,14 @@ export default {
   .post {
     width: 100%;
   }
+  .top-post-published {
+    padding-left: 5px;
+  }
   .fa-ellipsis-v {
     display: inline-block;
+  }
+  .fa-ellipsis-v:hover {
+    cursor: pointer;
   }
   .social-ul {
     display: none;
@@ -153,6 +183,21 @@ export default {
     padding: 10px;
     top: 0;
     right: 0;
+    width: fit-content;
+  }
+  .fa-ellipsis-v:hover ~ .social-box .social-ul {
+    display: block;
+    background: var(--white-color);
+    z-index: 1;
+  }
+  .social-li {
+    margin: 15px 0px;
+  }
+  .social-li a {
+    display: flex;
+  }
+  .social-name {
+    display: inline-block;
   }
 }
 </style>
