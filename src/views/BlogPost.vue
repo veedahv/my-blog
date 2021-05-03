@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       postsArr: articleInfo,
-      visibleBlogArr: [],
+      visibleBlogArr: {},
       currentPage: 0,
       perPage: 4,
     };
@@ -36,7 +36,16 @@ export default {
       this.visibleBlog();
     },
     visibleBlog() {
-      this.visibleBlogArr = this.postsArr.slice((this.currentPage * this.perPage), (this.currentPage * this.perPage + this.perPage));
+      // this.visibleBlogArr = this.postsArr.slice((this.currentPage * this.perPage), (this.currentPage * this.perPage + this.perPage));
+      
+    (this.visibleBlogArr = Object.keys(this.postsArr)
+      .slice((this.currentPage * this.perPage), (this.currentPage * this.perPage + this.perPage))
+      .reduce((result, key) => {
+        result[key] = this.postsArr[key];
+
+        return result;
+      }, {}))
+      // this.visibleBlogArr = this.postsArr;
     },
   },
   beforeMount() {

@@ -23,7 +23,7 @@ export default {
       this.$emit('page:update', pageNumber);
     },
     totalPages() {      
-      return Math.ceil(this.postsArr.length / this.perPage)
+      return Math.ceil(Object.keys(this.postsArr).length / this.perPage)
     },
     showPrevPage() {
       return this.currentPage == 0 ? false : true;

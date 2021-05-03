@@ -23,7 +23,7 @@
         :to="{
           name: 'BlogContent',
           params: {
-            id: post.title,
+            title: post.title,
           },
         }"
       >
@@ -38,11 +38,11 @@
         :to="{
           name: 'BlogContent',
           params: {
-            id: post.title,
-            post: postsObj,
+            title: post.title,
           },
         }"
       >
+            <!-- post: postsObj, -->
         <p class="post-info">{{ post.description }}..</p>
       </router-link>
     </div>
@@ -52,11 +52,12 @@
 <script>
 export default {
   props: ["post"],
-  data() {
-    return {
-      postsObj: JSON.stringify(this.post),
-    };
-  },
+  // data() {
+  //   // return {
+  //   //   // postsObj: JSON.stringify(this.post),
+  //   //   title: this.post.title,
+  //   // };
+  // },
 };
 </script>
 

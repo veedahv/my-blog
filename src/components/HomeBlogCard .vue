@@ -14,8 +14,7 @@
         :to="{
           name: 'BlogContent',
           params: {
-            id: post.title,
-            post: postsObj,
+            title: post.title,
           },
         }"
       >
@@ -43,12 +42,12 @@
 <script>
 export default {
   props: ["post"],
-  data() {
-    return {
-      contentsObj: JSON.stringify(this.post.contents),
-      postsObj: JSON.stringify(this.post),
-    };
-  },
+  // data() {
+  //   return {
+  //     contentsObj: JSON.stringify(this.post.contents),
+  //     postsObj: JSON.stringify(this.post),
+  //   };
+  // },
 };
 </script>
 

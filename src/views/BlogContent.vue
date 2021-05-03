@@ -1,25 +1,25 @@
 <template>
   <div class="post-container">
-    <div class="post">
       <div v-if="loading" class="loading">
-      Loading...
+      ...
     </div>
 
     <div v-if="error" class="error">
       {{ error }}
     </div>
-      <!-- <div class="img-box">
+    <div v-if="post" class="post">
+      <div class="img-box">
         <img
-          :src="require(`@/assets/images/blog-img/${postObj.urlToImage}.jpg`)"
+          :src="require(`@/assets/images/blog-img/${post.urlToImage}.jpg`)"
           class="post-img"
         />
-      </div> -->
+      </div>
       <div class="txt-box">
-        <!-- <div class="top-post">
+        <div class="top-post">
           <div class="top-post-left">
-            <small class="top-post-author">By {{ postObj.author }} </small>
+            <small class="top-post-author">By {{ post.author }} </small>
             <small class="top-post-published">
-              Published at {{ postObj.publishedAt }}
+              Published at {{ post.publishedAt }}
             </small>
           </div>
           <div class="top-post-right">
@@ -69,11 +69,11 @@
               </ul>
             </div>
           </div>
-        </div> -->
-        <h2 class="post-title">{{ id }}</h2>
-        <!-- <div
+        </div>
+        <h2 class="post-title">{{ title }}</h2>
+        <div
           class="post-contents"
-          v-for="content in postObj.contents"
+          v-for="content in post.contents"
           :key="content"
         >
           <h3 class="post-subtitle" v-if="content.subTitle">
@@ -82,12 +82,11 @@
           <p class="post-info">
             {{ content.contentTxt }}
           </p>
-        </div> -->
+        </div>
       </div>
     </div>
     <CommentBox></CommentBox>
   </div>
-  <!--item-->
 </template>
 
 <script>
@@ -95,45 +94,17 @@ import CommentBox from "../components/CommentBox";
 import { getPost } from "@/scripts/getPost.js";
 export default {
   components: { CommentBox },
-  props: ["id"],
-  // props: ["post", "id"],
+  props: ["title"],
   data() {
     return {
-      // postObj: JSON.parse(this.post),
-      // postObj: this.$route.JSON.parse(this.post),
       dropBox: false,
       loading: false,
-      // id: this.id,
       post: null,
       error: null,
     };
   },
-  // beforeRouteEnter (to, from, next) {
-  //   getPost(to.params.id, (err, post) => {
-  //     next(vm => vm.setData(err, post))
-  //   })
-  // },
-  // // when route changes and this component is already rendered,
-  // // the logic will be slightly different.
-  // beforeRouteUpdate (to, from, next) {
-  //   this.post = null
-  //   getPost(to.params.id, (err, post) => {
-  //     this.setData(err, post)
-  //     next()
-  //   })
-  // },
-  // methods: {
-  //   setData (err, post) {
-  //     if (err) {
-  //       this.error = err.toString()
-  //     } else {
-  //       this.post = post
-  //     }
-  //   }
-  // },
   created () {
-    // fetch the data when the view is created and the data is
-    // already being observed
+    // fetch the data when the view is created and the data is already being observed
     this.fetchData()
   },
   watch: {
@@ -144,30 +115,23 @@ export default {
     fetchData () {
       this.error = this.post = null
       this.loading = true
-      const fetchedId = this.$route.params.id
+      const fetchedId = this.$route.params.title
       // replace `getPost` with your data fetching util / API wrapper
       getPost(fetchedId, (err, post) => {
         // make sure this request is the last one we did, discard otherwise
-        if (this.$route.params.id !== fetchedId) return
+        if (this.$route.params.title !== fetchedId) return
         this.loading = false
         if (err) {
           this.error = err.toString()
         } else {
-          this.post = post
+          this.post = post;
         }
       })
+    },
+    toggleBox() {
+      this.dropBox = !this.dropBox;
     }
   },
-  mounted() {
-    // console.log(this.postObj);
-        console.log(this.post);
-    console.log(this.$route.params.id);
-  },
-  // methods: {
-  //   toggleBox() {
-  //     this.dropBox = !this.dropBox;
-  //   }
-  // },
 };
 </script>
 

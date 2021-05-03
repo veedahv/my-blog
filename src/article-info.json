@@ -1,5 +1,5 @@
-[
-    {
+{
+    "Here is why chocolate cake is my favorite cake.": {
         "title": "Here is why chocolate cake is my favorite cake.",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -32,7 +32,7 @@
         ],
         "comments": []
     },
-    {
+    "Learn how to make cheese in 30 minutes.": {
         "title": "Learn how to make cheese in 30 minutes.",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -65,7 +65,7 @@
         ],
         "comments": []
     },
-    {
+    "Why tuna fish good for you if you want to lose weight.": {
         "title": "Why tuna fish good for you if you want to lose weight.",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -94,7 +94,7 @@
         ],
         "comments": []
     },
-    {
+    "The joy that comes with every home run.": {
         "title": "The joy that comes with every home run.",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -131,7 +131,7 @@
         ],
         "comments": []
     },
-    {
+    "How to tame that stubborn afro": {
         "title": "How to tame that stubborn afro",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -160,7 +160,7 @@
         ],
         "comments": []
     },
-    {
+    "Bacon, and its harmful properties!": {
         "title": "Bacon, and its harmful properties!",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -193,7 +193,7 @@
         ],
         "comments": []
     },
-    {
+    "A day in the life of a vegan. Come take this journey with me": {
         "title": "A day in the life of a vegan. Come take this journey with me",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -222,7 +222,7 @@
         ],
         "comments": []
     },
-    {
+    "My first time on a skateboard. The thrill!!": {
         "title": "My first time on a skateboard. The thrill!!",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -251,7 +251,7 @@
         ],
         "comments": []
     },
-    {
+    "Your favorite fashion police": {
         "title": "Your favorite fashion police",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -284,7 +284,7 @@
         ],
         "comments": []
     },
-    {
+    "Education is key for the growing child": {
         "title": "Education is key for the growing child",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -317,7 +317,7 @@
         ],
         "comments": []
     },
-    {
+    "Breakfast, the most important meal of the day should be enjoyed not rushed!": {
         "title": "Breakfast, the most important meal of the day should be enjoyed not rushed!",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -350,7 +350,7 @@
         ],
         "comments": []
     },
-    {
+    "The best care for melanin skin": {
         "title": "The best care for melanin skin",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -383,7 +383,7 @@
         ],
         "comments": []
     },
-    {
+    "Why I have always hoped to visit space someday": {
         "title": "Why I have always hoped to visit space someday",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -424,7 +424,7 @@
         ],
         "comments": []
     },
-    {
+    "You can not shame the shameless": {
         "title": "You can not shame the shameless",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -461,7 +461,7 @@
         ],
         "comments": []
     },
-    {
+    "Problem no de finish! Try de enjoy life small.": {
         "title": "Problem no de finish! Try de enjoy life small.",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -506,7 +506,7 @@
         ],
         "comments": []
     },
-    {
+    "Ayy": {
         "title": "Ayy",
         "author": "Marylene Ibuoteto",
         "authorProf": "Professional hustler",
@@ -523,4 +523,4 @@
         ],
         "comments": []
     }
-]
+}

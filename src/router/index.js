@@ -12,7 +12,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/blog/:id',
+    path: '/blog/:title',
     name: 'BlogContent',
     component: BlogContent,
     props: true
@@ -23,7 +23,7 @@ const routes = [
     component: BlogPost,
     // children:
     //   [{
-    //     path: ':id',
+    //     path: ':title',
     //     name: 'BlogContent',
     //     component: BlogContent,
     //     props: true

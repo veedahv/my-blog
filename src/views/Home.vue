@@ -29,7 +29,9 @@
     </div>
     <div class="blog-post-section">
       <div class="home-container">
-        <h3 class="home-sub-title">Here are a few articles that might interest you</h3>
+        <h3 class="home-sub-title">
+          Here are a few articles that might interest you
+        </h3>
         <div class="home-post-box">
           <div class="post-box" v-for="post in HomeBlogCards" :key="post.title">
             <home-blog-card :post="post"></home-blog-card>
@@ -44,7 +46,9 @@
     </div>
     <div class="tips-post-section">
       <div class="home-container">
-        <h3 class="home-sub-title">things to consider when writing an article</h3>
+        <h3 class="home-sub-title">
+          things to consider when writing an article
+        </h3>
         <div class="home-tip-box">
           <div class="tip-box" v-for="tip in HomeTipsArr" :key="tip.title">
             <home-tip-card :tip="tip"></home-tip-card>
@@ -63,7 +67,7 @@
 
 <script>
 // @ is an alias to /src
-import HomeTipCard from '@/components/HomeTipCard'
+import HomeTipCard from "@/components/HomeTipCard";
 import tipsInfo from "@/tips-info";
 import articleInfo from "@/article-info";
 import HomeBlogCard from "@/components/HomeBlogCard .vue";
@@ -80,12 +84,17 @@ export default {
     return {
       HomeTipsArr: tipsInfo,
       HomeCardsArr: articleInfo,
-      HomeBlogCards: [],
+      HomeBlogCards: {},
     };
   },
   mounted() {
-    (this.HomeBlogCards = this.HomeCardsArr.slice(0, 3)),
-      console.log(this.HomeBlogCards);
+    (this.HomeBlogCards = Object.keys(this.HomeCardsArr)
+      .slice(0, 3)
+      .reduce((result, key) => {
+        result[key] = this.HomeCardsArr[key];
+
+        return result;
+      }, {}))
   },
 };
 </script>
@@ -100,8 +109,6 @@ export default {
   padding: 10px 25px;
 }
 .landing {
-  /* padding-top: 40px;
-  padding-bottom: 100px; */
   background: var(--primay-color);
 }
 .landing-container {
@@ -147,7 +154,7 @@ export default {
   width: 100%;
 }
 
-.home-sub-title{
+.home-sub-title {
   font-size: 25px;
   text-transform: capitalize;
   text-align: center;
@@ -210,8 +217,8 @@ export default {
     grid-template-columns: 1fr 1fr;
   }
   .landing-container {
-  padding-bottom: 250px;
-}
+    padding-bottom: 250px;
+  }
   .home-quote {
     font-size: 17px;
     line-height: 22px;
