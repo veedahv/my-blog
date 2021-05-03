@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div class="box">
+      <h4 class="title">comments <i class="fa fa-angle-down" aria-hidden="true"></i></h4>
       <ul class="comment-container" v-if="commentState">
         <li
           class="comment-box"
@@ -74,6 +75,11 @@ export default {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+}
+.title {
+  font-size: 14px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
 }
 .author {
   font-size: 10px;
