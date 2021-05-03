@@ -31,15 +31,19 @@
 
 <script>
 export default {
+  props: ['comments'],
   data() {
     return {
       imgSrc: require('../assets/images/author-img/blank-profile-picture.png'),
       commentAuthor: 'Anonymous',
-      commentTxts: ['fghjkghjk'],
+      commentTxts: [],
       newComment: '',
       commentState: true,
       // commentState: false,
     };
+  },
+  mounted() {
+    this.commentTxts = this.comments;
   },
   methods: {
     addComment() {

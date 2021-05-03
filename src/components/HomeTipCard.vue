@@ -14,16 +14,6 @@
 <script>
 export default {
   props: ["tip"],
-  // data() {
-  //   return {
-  //     // postsObj: JSON.stringify(this.post),
-  //   };
-  // },
-  // mounted() {
-  //   // console.log(this.contents);
-  //   // console.log(this.contentsObj);
-  //   // console.log(JSON.stringify(this.contentsObj));
-  // },
 };
 </script>
 
@@ -55,9 +45,4 @@ export default {
   margin-bottom: 10px;
   display: inline-block;
 }
-/* @media only screen and (max-width: 567px) {
-  .post {
-    flex-direction: column;
-  }
-} */
 </style>

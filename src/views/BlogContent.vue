@@ -85,7 +85,7 @@
         </div>
       </div>
     </div>
-    <CommentBox></CommentBox>
+    <CommentBox :comments="content.comments"></CommentBox>
   </div>
 </template>
 
@@ -151,12 +151,8 @@ export default {
   /* justify-content: space-between; */
 }
 .txt-box {
-  /* display: flex;
-  flex-direction: column-reverse;
-  align-items: center; */
   max-width: 700px;
   margin: 10px auto;
-  /* justify-content: space-between; */
 }
 .fa-ellipsis-v {
   display: none;
@@ -165,6 +161,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 0px;
+  margin-top: 10px;
+  border-top: 1px solid var(--tertiary-color);
+  border-bottom: 1px solid var(--tertiary-color);
 }
 .top-post-published {
   padding-left: 15px;
@@ -178,6 +178,9 @@ export default {
 }
 .social-li {
   margin-left: 15px;
+}
+.social-icon {
+  font-size: 20px;
 }
 .social-name {
   display: none;

@@ -49,15 +49,9 @@
 
 
 <script>
-// import CommentBoxVue from './components/CommentBox.vue';
 export default {
   data() {
     return {
-      // imgSrc: require('../assets/images/author-img/blank-profile-picture.png'),
-      // commentAuthor: 'Anonymous',
-      // commentTxts: ['fghjkghjk'],
-      // newComment: '',
-      // commentState: true,
       boxChecked: false,
     };
   },
@@ -71,7 +65,6 @@ export default {
       console.log(this.boxChecked);
     }
   },
-  // props: ["post"],
 };
 </script>
 
@@ -210,7 +203,6 @@ a {
   .nav-checkbox:checked ~ .navigation {
     display: block;
     height: fit-content;
-    /* background: turquoise; */
   }
   .nav-checkbox-label:hover .menu-line::before {
     top: -9px;
