@@ -2,7 +2,11 @@
   <div class="container">
     <div class="box">
       <ul class="comment-container" v-if="commentState">
-        <li class="comment-box" v-for="commentTxt in commentTxts" :key="commentTxt">
+        <li
+          class="comment-box"
+          v-for="commentTxt in commentTxts"
+          :key="commentTxt"
+        >
           <div class="img-box">
             <img :src="imgSrc" class="commenter-img" alt="user image" />
           </div>
@@ -21,9 +25,12 @@
           name=""
           class="comment-input"
           id="comment-input"
-          placeholder="Write a comment" v-model="newComment"
+          placeholder="Write a comment"
+          v-model="newComment"
         />
-        <button class="comment-input-send" @click="addComment"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+        <button class="comment-input-send" @click="addComment">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
   </div>
@@ -31,40 +38,48 @@
 
 <script>
 export default {
-  props: ['comments'],
+  props: ["comments"],
   data() {
     return {
-      imgSrc: require('../assets/images/author-img/blank-profile-picture.png'),
-      commentAuthor: 'Anonymous',
+      imgSrc: require("../assets/images/author-img/blank-profile-picture.png"),
+      commentAuthor: "Anonymous",
       commentTxts: [],
-      newComment: '',
-      commentState: true,
-      // commentState: false,
+      newComment: "",
+      // commentState: true,
+      commentState: false,
     };
   },
   mounted() {
     this.commentTxts = this.comments;
+    this.commentTxts !== null
+      ? (this.commentState = true)
+      : (this.commentState = false);
   },
   methods: {
     addComment() {
       this.commentTxts.push(this.newComment);
       this.commentState = true;
-      this.newComment = '';
-    }
+      this.newComment = "";
+    },
   },
-  // props: ["post"],
 };
 </script>
 
 <style scoped>
+.container {
+  max-width: 700px;
+  margin: 5px auto;
+}
 .post {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  /* justify-content: space-between; */
 }
 .author {
   font-size: 10px;
+}
+.comment-box {
+  margin-bottom: 25px;
 }
 .comment-box,
 .comment-input-box {
@@ -76,8 +91,6 @@ export default {
 }
 .commenter-img,
 .comment-input-img {
-  /* width: 40px;
-  margin: 5px; */
   border-radius: 50%;
 }
 .comment-txt {
@@ -88,11 +101,10 @@ export default {
 }
 .commenter-img {
   width: 50px;
-  margin-right: 25px;
+  margin-right: 30px;
 }
 .comment-input-img-box {
   width: 45px;
-  /* padding: 5px; */
   margin-right: 10px;
   display: flex;
   justify-content: center;
@@ -100,7 +112,6 @@ export default {
 }
 .comment-input-img {
   width: 100%;
-  /* margin: 5px; */
 }
 .comment-input {
   padding: 10px 15px;
@@ -118,5 +129,11 @@ export default {
   font-size: 25px;
   outline: none;
   border: none;
+}
+@media only screen and (max-width: 567px) {
+  .commenter-img {
+    width: 45px;
+    margin-right: 20px;
+  }
 }
 </style>

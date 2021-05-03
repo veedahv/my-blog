@@ -52,12 +52,6 @@
 <script>
 export default {
   props: ["post"],
-  // data() {
-  //   // return {
-  //   //   // postsObj: JSON.stringify(this.post),
-  //   //   title: this.post.title,
-  //   // };
-  // },
 };
 </script>
 

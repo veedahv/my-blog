@@ -27,7 +27,7 @@ export default {
       postsArr: articleInfo,
       visibleBlogArr: {},
       currentPage: 0,
-      perPage: 4,
+      perPage: 5,
     };
   },
   methods: {
