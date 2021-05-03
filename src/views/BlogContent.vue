@@ -1,7 +1,22 @@
 <template>
   <div class="post-container">
-      <div v-if="loading" class="loading">
-      ...
+    <div v-if="loading" class="loading">
+      <div class="loadingio-spinner-spinner-jc478d2mnnj">
+        <div class="ldio-9vepvn16t37">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </div>
 
     <div v-if="error" class="error">
@@ -23,7 +38,12 @@
             </small>
           </div>
           <div class="top-post-right">
-            <i class="fa fa-ellipsis-v" :class="{dropBox: dropBox}" @click="toggleBox()" aria-hidden="true"></i>
+            <i
+              class="fa fa-ellipsis-v"
+              :class="{ dropBox: dropBox }"
+              @click="toggleBox()"
+              aria-hidden="true"
+            ></i>
             <div class="social-box">
               <ul class="social-ul">
                 <li class="social-li">
@@ -103,34 +123,34 @@ export default {
       error: null,
     };
   },
-  created () {
+  created() {
     // fetch the data when the view is created and the data is already being observed
-    this.fetchData()
+    this.fetchData();
   },
   watch: {
     // call again the method if the route changes
-    '$route': 'fetchData'
+    $route: "fetchData",
   },
   methods: {
-    fetchData () {
-      this.error = this.post = null
-      this.loading = true
-      const fetchedId = this.$route.params.title
+    fetchData() {
+      this.error = this.post = null;
+      this.loading = true;
+      const fetchedId = this.$route.params.title;
       // replace `getPost` with your data fetching util / API wrapper
       getPost(fetchedId, (err, post) => {
         // make sure this request is the last one we did, discard otherwise
-        if (this.$route.params.title !== fetchedId) return
-        this.loading = false
+        if (this.$route.params.title !== fetchedId) return;
+        this.loading = false;
         if (err) {
-          this.error = err.toString()
+          this.error = err.toString();
         } else {
           this.post = post;
         }
-      })
+      });
     },
     toggleBox() {
       this.dropBox = !this.dropBox;
-    }
+    },
   },
 };
 </script>
@@ -141,6 +161,117 @@ export default {
   padding: 10px 25px;
   margin: 10px auto;
 }
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes ldio-9vepvn16t37 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.ldio-9vepvn16t37 div {
+  left: 94px;
+  top: 48px;
+  position: absolute;
+  animation: ldio-9vepvn16t37 linear 1s infinite;
+  background: #4d4d3d;
+  width: 12px;
+  height: 24px;
+  border-radius: 6px / 12px;
+  transform-origin: 6px 52px;
+}
+.ldio-9vepvn16t37 div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -0.9166666666666666s;
+  background: #4d4d3d;
+}
+.ldio-9vepvn16t37 div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -0.8333333333333334s;
+  background: #4d4d3d;
+}
+.ldio-9vepvn16t37 div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.75s;
+  background: #4d4d3d;
+}
+.ldio-9vepvn16t37 div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.6666666666666666s;
+  background: #4d4d3d;
+}
+.ldio-9vepvn16t37 div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.5833333333333334s;
+  background: #4d4d3d;
+}
+.ldio-9vepvn16t37 div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.5s;
+  background: #4d4d3d;
+}
+.ldio-9vepvn16t37 div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.4166666666666667s;
+  background: #4d4d3d;
+}
+.ldio-9vepvn16t37 div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.3333333333333333s;
+  background: #4d4d3d;
+}
+.ldio-9vepvn16t37 div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.25s;
+  background: #4d4d3d;
+}
+.ldio-9vepvn16t37 div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.16666666666666666s;
+  background: #4d4d3d;
+}
+.ldio-9vepvn16t37 div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.08333333333333333s;
+  background: #4d4d3d;
+}
+.ldio-9vepvn16t37 div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+  background: #4d4d3d;
+}
+.loadingio-spinner-spinner-jc478d2mnnj {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
+}
+.ldio-9vepvn16t37 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-9vepvn16t37 div {
+  box-sizing: content-box;
+}
+/* generated by https://loading.io/ */
 .post {
   display: flex;
   flex-direction: column;

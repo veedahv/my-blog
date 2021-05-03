@@ -77,7 +77,7 @@ export default {
   --sec-a-color: #4d4d3d79;
   --tertiary-color: #8b9386;
   --light-color: #f0f0eb;
-  --light-a-color: #f0f0eb63;
+  --light-a-color: #88887463;
   --spare-color: #a9b1a1;
   --white-color: #ffffff;
 }
