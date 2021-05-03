@@ -24,10 +24,10 @@
           name: 'BlogContent',
           params: {
             id: post.title,
-            post: postsObj,
           },
         }"
       >
+            <!-- post: postsObj, -->
         <h2 class="post-title">{{ post.title }}</h2>
       </router-link>
       <div class="time-info-box">

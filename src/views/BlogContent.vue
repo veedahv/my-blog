@@ -16,7 +16,7 @@
             </small>
           </div>
           <div class="top-post-right">
-            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            <i class="fa fa-ellipsis-v" :class="{dropBox: dropBox}" @click="toggleBox()" aria-hidden="true"></i>
             <div class="social-box">
               <ul class="social-ul">
                 <li class="social-li">
@@ -87,15 +87,50 @@
 import CommentBox from "../components/CommentBox";
 export default {
   components: { CommentBox },
-  props: ["post", "id"],
+  props: ["id"],
+  // props: ["post", "id"],
   data() {
     return {
       postObj: JSON.parse(this.post),
+      // postObj: this.$route.JSON.parse(this.post),
+      dropBox: false,
+      // id: this.id,
+      post: null,
+      error: null,
     };
   },
-  mounted() {
-    console.log(this.postObj);
+  beforeRouteEnter (to, from, next) {
+    getPost(to.params.id, (err, post) => {
+      next(vm => vm.setData(err, post))
+    })
   },
+  // when route changes and this component is already rendered,
+  // the logic will be slightly different.
+  beforeRouteUpdate (to, from, next) {
+    this.post = null
+    getPost(to.params.id, (err, post) => {
+      this.setData(err, post)
+      next()
+    })
+  },
+  methods: {
+    setData (err, post) {
+      if (err) {
+        this.error = err.toString()
+      } else {
+        this.post = post
+        console.log(this.post);
+      }
+    }
+  },
+  // mounted() {
+  //   console.log(this.postObj);
+  // },
+  // methods: {
+  //   toggleBox() {
+  //     this.dropBox = !this.dropBox;
+  //   }
+  // },
 };
 </script>
 
@@ -180,12 +215,12 @@ export default {
     display: none;
     position: absolute;
     flex-direction: column;
-    padding: 10px;
+    padding: 5px 15px;
     top: 0;
     right: 0;
     width: fit-content;
   }
-  .fa-ellipsis-v:hover ~ .social-box .social-ul {
+  .dropBox ~ .social-box .social-ul {
     display: block;
     background: var(--white-color);
     z-index: 1;

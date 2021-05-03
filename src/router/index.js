@@ -12,7 +12,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/post/:id',
+    path: '/blog/:id',
     name: 'BlogContent',
     component: BlogContent,
     props: true
@@ -20,7 +20,14 @@ const routes = [
   {
     path: '/blog',
     name: 'BlogPost',
-    component: BlogPost
+    component: BlogPost,
+    // children:
+    //   [{
+    //     path: ':id',
+    //     name: 'BlogContent',
+    //     component: BlogContent,
+    //     props: true
+    //   },]
   },
   {
     path: '/:catchAll(.*)',
