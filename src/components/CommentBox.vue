@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="box">
-      <h4 class="title">comments <i class="fa fa-angle-down" aria-hidden="true"></i></h4>
+      <h4 class="title">comments <span class="no">({{ numberComment }})</span></h4>
       <ul class="comment-container" v-if="commentState">
         <li
           class="comment-box"
@@ -46,12 +46,14 @@ export default {
       commentAuthor: "Anonymous",
       commentTxts: [],
       newComment: "",
+      numberComment: 0,
       // commentState: true,
       commentState: false,
     };
   },
   mounted() {
     this.commentTxts = this.comments;
+    this.numberComment = this.comments.length;
     this.commentTxts !== null
       ? (this.commentState = true)
       : (this.commentState = false);
@@ -61,6 +63,7 @@ export default {
       this.commentTxts.push(this.newComment);
       this.commentState = true;
       this.newComment = "";
+    this.numberComment = this.comments.length;
     },
   },
 };
